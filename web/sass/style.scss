@@ -25,6 +25,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Navigation */
 nav {
   background-color: $main-beige;
   width: 100%;
@@ -34,6 +35,7 @@ nav {
   border-bottom: 3px solid transparent;
   position: fixed;
   z-index: 2;
+  top: 0;
 }
 
 a {
@@ -41,6 +43,10 @@ a {
   font-family: futura-pt, sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+li{
+  list-style: none;
 }
 
 .mobileNav{
@@ -63,7 +69,6 @@ a {
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    list-style: none;
 
     li {
       margin-right: 40px;
@@ -72,80 +77,123 @@ a {
 
   a {
     color: $main-blue;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
   }
 }
-/* Nav animation*/
-
-#mainNav ul li a,
-#mainNav ul li a:after,
-#mainNav ul li a:before {
-  transition: all 0.5s;
-}
-
-#mainNav ul li a:hover {
-  color: #ff6821;
-}
-/* stroke */
-#mainNav.stroke ul li a {
-  position: relative;
-}
-
-#mainNav ul li a:after,
-#mainNav.stroke ul li a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0;
-  content: '.';
-  color: transparent;
-  background: #ff6821;
-  height: 2px;
-}
-
-#mainNav.stroke ul li a:hover:after {
-  width: 100%;
-}
-
-#mainNav ul li a {
-  transition: all 1s;
-}
-
-#mainNav ul li a:after {
-  text-align: left;
-  content: '.';
-  margin: 0;
-  opacity: 0;
-}
-
-#mainNav ul li a:hover {
-  color: #E34F25;
-  z-index: 1;
-}
-
-#mainNav ul li a:hover:after {
-  z-index: -10;
-  animation: fill 1s forwards;
-  opacity: 1;
-}
-/* Nav animation end*/
-
-#contact {
-  border-image: $gradient-right;
-  border-image-slice: 1;
-  border: 5px solid transparent;
-}
-
 #logo {
   width: auto;
   height: 35px;
 }
+/* Nav animation*/
+
+.link a:hover{
+
+    color: inherit;
+	text-decoration: none;
+}
+
+.link a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: $gradient-right;
+    transition: width .3s;
+}
+
+.link a:hover::after {
+    width: 100%;
+	transition: width .3s;
+}
+
+#contact a{
+  padding: 2px;
+  border-image: $gradient-right;
+  border-image-slice: 1;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  transition: .3s;
+
+}
+#contact a:hover{
+  background: $gradient-right;
+  color: white;
+  transition: ease-in-out .3s;
+}
+#contact a:hover::after{
+  transition: ease-in-out .3s;
+  padding: 3px;
+}
+/* Nav animation end*/
+
+/* Footer */
+footer{
+  width: 100%;
+  display: flex;
+  margin-top: 200px;
+  background-color: blue;
+  a{
+    color: white;
+  }
+}
+
+.footer-left{
+  width: 50%;
+}
+
+
+.footer-right{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-other{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact-form{
+  background-color: $main-blue;
+  height: 50%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+#contact-form{
+  @extend %center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-control{
+  width: 80%;
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 5px solid white;
+  color: white;
+}
+
+placeholder{
+  color: white;
+}
+
+textarea{
+  border: 1px solid white;
+}
+
+
+/*Navigation end*/
 @media only screen and (max-width: 800px) {
   .navlink {
     display: none;
   }
+
+  /* Mobile Navigation */
 
   .mobileNav{
     display: flex;
@@ -164,9 +212,9 @@ a {
     display: flex;
     flex-direction: column;
     position: fixed;
-    margin-top: 10px;
-    right: -60%;
-    width: 45%;
+    margin-top: 13px;
+    right: -190px;
+    width: 180px;
     height: 100%;
     background-color: $main-beige;
     transition: all 500ms linear;
@@ -232,4 +280,5 @@ a {
     opacity: 0.8;
     visibility: visible;
   }
+  /* Mobile Navigation End */
 }
