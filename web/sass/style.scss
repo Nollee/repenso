@@ -1,7 +1,284 @@
-//Hello
-h2{
+//Variabler//
+$main-blue: #001624;
+$main-beige: #FDFBED;
+$gradient-right: linear-gradient(to right, #ff6821 0%, #f18c27 100%);
+$gradient-top: linear-gradient(to top, #ff6821 0%, #f18c27 100%); //Variabler//
+//Inheritances//
+
+%center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+//Inheritances//
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
   color: red;
 }
+
 body {
+  background-color: $main-blue;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+  background-color: $main-beige;
+  width: 100%;
+  padding: 20px;
+  border-image: $gradient-right;
+  border-image-slice: 1;
+  border-bottom: 3px solid transparent;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: futura-pt, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+li{
+  list-style: none;
+}
+
+.mobileNav{
+  display: none;
+}
+#mainNav {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.navlink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+    li {
+      margin-right: 40px;
+    }
+  }
+
+  a {
+    color: $main-blue;
+    padding-bottom: 3px;
+  }
+}
+#logo {
+  width: auto;
+  height: 35px;
+}
+/* Nav animation*/
+
+.link a:hover{
+
+    color: inherit;
+	text-decoration: none;
+}
+
+.link a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: $gradient-right;
+    transition: width .3s;
+}
+
+.link a:hover::after {
+    width: 100%;
+	transition: width .3s;
+}
+
+#contact a{
+  padding: 2px;
+  border-image: $gradient-right;
+  border-image-slice: 1;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  transition: .3s;
+
+}
+#contact a:hover{
+  background: $gradient-right;
+  color: white;
+  transition: ease-in-out .3s;
+}
+#contact a:hover::after{
+  transition: ease-in-out .3s;
+  padding: 3px;
+}
+/* Nav animation end*/
+
+/* Footer */
+footer{
+  width: 100%;
+  display: flex;
+  margin-top: 200px;
   background-color: blue;
+  a{
+    color: white;
+  }
+}
+
+.footer-left{
+  width: 50%;
+}
+
+
+.footer-right{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-other{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact-form{
+  background-color: $main-blue;
+  height: 50%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+#contact-form{
+  @extend %center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-control{
+  width: 80%;
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 5px solid white;
+  color: white;
+}
+
+placeholder{
+  color: white;
+}
+
+textarea{
+  border: 1px solid white;
+}
+
+
+/*Navigation end*/
+@media only screen and (max-width: 800px) {
+  .navlink {
+    display: none;
+  }
+
+  /* Mobile Navigation */
+
+  .mobileNav{
+    display: flex;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  #logo {
+    width: 60%;
+    height: auto;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 13px;
+    right: -190px;
+    width: 180px;
+    height: 100%;
+    background-color: $main-beige;
+    transition: all 500ms linear;
+    border-image: $gradient-top;
+    border-image-slice: 1;
+    border-left: 3px solid transparent;
+
+    a {
+      color: $main-blue;
+      border-bottom: 1px solid $main-blue;
+      padding: 15px 10px;
+    }
+  }
+
+  .burger {
+    position: absolute;
+    right: 30px;
+    top: 20%;
+    display: inline-block;
+
+    div {
+      width: 35px;
+      height: 5px;
+      background-color: $main-blue;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+  }
+
+  .sidebar.slide {
+    right: 0;
+  }
+
+  #line2.slide {
+    opacity: 0;
+  }
+
+  #line1.slide {
+    transform: rotate(-45deg) translate(2px, 8px);
+  }
+
+  #line3.slide {
+    transform: rotate(45deg) translate(-6px, -16px);
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: red;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .overlay.slide {
+    opacity: 0.8;
+    visibility: visible;
+  }
+  /* Mobile Navigation End */
 }
