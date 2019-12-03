@@ -85,7 +85,6 @@ nav {
 
   a {
     color: $main-blue;
-    padding-bottom: 3px;
   }
 }
 
@@ -113,26 +112,30 @@ nav {
   transition: width 0.3s;
 }
 
-#contact a {
-  padding: 2px;
-  border-image: $gradient-right;
-  border-image-slice: 1;
-  border-style: solid;
-  border-width: 3px;
-  border-color: transparent;
-  transition: 0.3s;
+
+#contact{
+  background:
+  linear-gradient(#FFF,#FFF) padding-box left,
+  linear-gradient(to right, blue 0%, green 100%) border-box;
+    background-size:100% 100%,auto;
+    background-repeat:no-repeat;
+    border: 0px solid transparent;
+    color: $main-blue;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 7px 22px;
+    transition: all .5s ease;
+    display: block;
 }
 
-#contact a:hover {
-  background: $gradient-right;
+#contact:hover{
+  background-size: 0% 100%, auto;
   color: white;
-  transition: ease-in-out 0.3s;
+  a{
+    color: white;
+  }
 }
 
-#contact a:hover::after {
-  transition: ease-in-out 0.3s;
-  padding: 3px;
-}
 /* Nav animation end*/
 /* Footer */
 footer {
