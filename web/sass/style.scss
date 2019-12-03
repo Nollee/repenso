@@ -2,18 +2,25 @@
 $main-blue: #001624;
 $main-beige: #FDFBED;
 $gradient-right: linear-gradient(to right, #ff6821 0%, #f18c27 100%);
-$gradient-top: linear-gradient(to top, #ff6821 0%, #f18c27 100%); //Variabler//
+$gradient-bottom: linear-gradient(to bottom, #ff6821 0%, #f18c27 100%); //Variabler End//
 //Inheritances//
 
 %center {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-content: center;
 }
-//Inheritances//
+
+%hide {
+  display: none;
+}
+//Inheritances End//
+
 * {
   margin: 0;
   padding: 0;
+  font-family: futura-pt, sans-serif;
 }
 
 h2 {
@@ -25,7 +32,18 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+li {
+  list-style: none;
+}
 /* Navigation */
+
 nav {
   background-color: $main-beige;
   width: 100%;
@@ -38,20 +56,10 @@ nav {
   top: 0;
 }
 
-a {
-  text-decoration: none;
-  font-family: futura-pt, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-li{
-  list-style: none;
-}
-
-.mobileNav{
+.mobileNav {
   display: none;
 }
+
 #mainNav {
   display: flex;
   justify-content: space-between;
@@ -80,122 +88,139 @@ li{
     padding-bottom: 3px;
   }
 }
+
 #logo {
   width: auto;
   height: 35px;
 }
 /* Nav animation*/
-
-.link a:hover{
-
-    color: inherit;
-	text-decoration: none;
+.link a:hover {
+  color: inherit;
+  text-decoration: none;
 }
 
 .link a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 3px;
-    background: $gradient-right;
-    transition: width .3s;
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: $gradient-right;
+  transition: width 0.3s;
 }
 
 .link a:hover::after {
-    width: 100%;
-	transition: width .3s;
+  width: 100%;
+  transition: width 0.3s;
 }
 
-#contact a{
+#contact a {
   padding: 2px;
   border-image: $gradient-right;
   border-image-slice: 1;
-  border-bottom: 3px solid transparent;
-  border-top: 3px solid transparent;
-  border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  transition: .3s;
-
+  border-style: solid;
+  border-width: 3px;
+  border-color: transparent;
+  transition: 0.3s;
 }
-#contact a:hover{
+
+#contact a:hover {
   background: $gradient-right;
   color: white;
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
-#contact a:hover::after{
-  transition: ease-in-out .3s;
+
+#contact a:hover::after {
+  transition: ease-in-out 0.3s;
   padding: 3px;
 }
 /* Nav animation end*/
-
 /* Footer */
-footer{
+footer {
   width: 100%;
   display: flex;
   margin-top: 200px;
-  background-color: blue;
-  a{
-    color: white;
+  background-color: $main-beige;
+  margin-bottom: 0;
+
+  a {
+    color: $main-blue;
   }
 }
 
-.footer-left{
+.footer-left {
   width: 50%;
 }
 
-
-.footer-right{
+.footer-right {
   width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.footer-other{
+
+.footer-other {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.contact-form{
-  background-color: $main-blue;
-  height: 50%;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-}
-
-#contact-form{
+.contact-form {
+  height: 65%;
+  width: 50%;
   @extend %center;
   flex-direction: column;
-  width: 100%;
+  padding: 5px 5px;
 }
 
-.form-control{
+#contact-form {
+  @extend %center;
+  flex-direction: column;
+  justify-content: center;
   width: 80%;
+}
+
+.form-control {
+  width: 100%;
   background-color: transparent;
-  border: 0px;
-  border-bottom: 5px solid white;
+  border: 0;
+  border-bottom: 2px solid $main-blue;
+  color: $main-blue;
+}
+
+.form-area{
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid $main-blue;
+    padding: 2px;
+}
+
+::placeholder {
+  color: gray;
+}
+
+textarea {
+  resize: none;
+}
+
+.submit {
+  background: $gradient-bottom;
+  font-size: 16px;
+  font-weight: 700;
+  width: 60%;
+  border: transparent;
+  margin-top: 20px;
+  height: 50px;
+  transition: 0.5s;
+  cursor: pointer;
   color: white;
 }
-
-placeholder{
-  color: white;
-}
-
-textarea{
-  border: 1px solid white;
-}
-
-
 /*Navigation end*/
 @media only screen and (max-width: 800px) {
   .navlink {
     display: none;
   }
-
   /* Mobile Navigation */
-
-  .mobileNav{
+  .mobileNav {
     display: flex;
   }
 
@@ -218,7 +243,7 @@ textarea{
     height: 100%;
     background-color: $main-beige;
     transition: all 500ms linear;
-    border-image: $gradient-top;
+    border-image: $gradient-bottom;
     border-image-slice: 1;
     border-left: 3px solid transparent;
 
@@ -271,7 +296,7 @@ textarea{
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: red;
+    background-color: $main-blue;
     opacity: 0;
     visibility: hidden;
   }
