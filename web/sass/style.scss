@@ -115,11 +115,11 @@ nav {
 
 #contact{
   background:
-  linear-gradient(#FFF,#FFF) padding-box left,
-  linear-gradient(to right, blue 0%, green 100%) border-box;
+  linear-gradient($main-beige,$main-beige) padding-box right,
+  linear-gradient(to right, #ff6821 0%, #f18c27 100%) border-box;
     background-size:100% 100%,auto;
     background-repeat:no-repeat;
-    border: 0px solid transparent;
+    border: 2px solid transparent;
     color: $main-blue;
     font-weight: 700;
     font-size: 14px;
@@ -130,7 +130,6 @@ nav {
 
 #contact:hover{
   background-size: 0% 100%, auto;
-  color: white;
   a{
     color: white;
   }
