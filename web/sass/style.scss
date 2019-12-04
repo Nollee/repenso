@@ -115,7 +115,7 @@ nav {
 
 #contact{
   background:
-  linear-gradient(#FFF,#FFF) padding-box left,
+  linear-gradient(#FFF,#FFF) padding-box right,
   linear-gradient(to right, blue 0%, green 100%) border-box;
     background-size:100% 100%,auto;
     background-repeat:no-repeat;
@@ -125,7 +125,7 @@ nav {
     font-size: 14px;
     padding: 7px 22px;
     transition: all .5s ease;
-    display: block;
+    display: block; 
 }
 
 #contact:hover{
