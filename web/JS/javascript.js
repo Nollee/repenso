@@ -9,7 +9,7 @@
    $(document).scroll(function () {
 	  var $nav = $(".frontpage-nav");
 	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-    $nav.attr('src', "hej", $(this).scrollTop() > $nav.height());
+    $("#logo").attr('src', "hej", $(this).scrollTop() > $nav.height());
 	});
   //navbar scroll change color end
  });
