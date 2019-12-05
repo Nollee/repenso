@@ -246,7 +246,7 @@ textarea {
   cursor: pointer;
   color: white;
 }
-/*Navigation end*/
+/*footer end*/
 
 /*index*/
 #hero-forside{
@@ -290,7 +290,9 @@ textarea {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  p{
+}
+.hero-desc {
+  p {
     font-size: 20px;
   }
 }
@@ -310,15 +312,14 @@ textarea {
   @extend %hide;
   color: white;
   text-align: right;
-  p {
-    font-weight: 200;
-  }
 }
-.quote-place p {
-  font-size: 10px;
+.quotes-quote, .quotes-person {
+  font-size: 20px;
+  font-weight: 200;
 }
-
-
+.quote-place{
+  font-size: 15px;
+} 
 /*index end*/
 
 /* cases */
