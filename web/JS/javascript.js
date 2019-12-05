@@ -23,5 +23,4 @@
     }
 	});
   //navbar scroll change color end
-
  });
