@@ -58,6 +58,9 @@ background-size: 500%;
   font-family: futura-pt, sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 
 
 body {
@@ -87,7 +90,7 @@ li {
   border-image-slice: 1;
   border-bottom: 3px solid transparent;
   position: fixed;
-  z-index: 2;
+  z-index: 20;
   top: 0;
   a {
     color: $main-blue;
@@ -148,11 +151,9 @@ li {
   height: 35px;
 }
 /* Nav animation*/
-.link a:hover {
-  text-decoration: none;
-}
 
-.link a::after {
+
+.link a::after, .departments a::after {
   content: '';
   display: block;
   width: 0;
@@ -161,7 +162,7 @@ li {
   transition: width 0.3s;
 }
 
-.link a:hover::after {
+.link a:hover::after, .departments a:hover::after {
   width: 100%;
   transition: width 0.3s;
 }
@@ -335,7 +336,7 @@ textarea {
   height: 80vh;
   position: relative;
   h1 {
-    padding-top: 50px; 
+    padding-top: 50px;
   }
   margin: auto;
   display: flex;
@@ -465,8 +466,8 @@ textarea {
 /* about.html */
   .about-container{
         margin: auto;
-    margin-top: 20vh;
-    width: 90%;
+    margin-top: 18vh;
+    width: 80%;
   }
 
   #about-heading{
@@ -493,12 +494,19 @@ textarea {
   }
 
   #about-intro{
-    margin-top: 10vh;
+    margin-top: 5vh;
     background-color: $main-beige;
     h2{
       color: $main-blue;
       font-size: 40px;
       font-weight: 700;
+    }
+    h3{
+      color: $main-blue;
+      font-size: 30px;
+      font-weight: 700;
+      margin-top: 3vh;
+      margin-bottom: 2vh;
     }
     p{
       margin-top: 3vh;
@@ -511,8 +519,132 @@ textarea {
   }
 
   .about-who{
-    padding: 70px 50px;
+    padding: 60px 50px;
   }
+  .departments{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    a{
+    font-size: 20px;
+    color: #FF6C25;
+    }
+    a:hover{
+      color: #FF5125;
+    }
+  }
+  .about-city{
+    background-color: $main-beige;
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div.anchor{
+    display: block;
+position: relative;
+top: 0px;
+visibility: hidden;
+  }
+
+  .city-pic{
+    width: 45%;
+  }
+
+  .city-text{
+    width: 50%;
+    padding: 20px 30px;
+    h2{
+      color: $main-blue;
+      font-size: 40px;
+      margin-bottom: 4vh;
+      padding: 10px 0px;
+    }
+  }
+
+  .city-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .city-icon{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    p, a{
+      font-weight: 600;
+      color: $main-blue;
+      font-size: 14px;
+    }
+    img{
+      width: 30px;
+      margin-right: 3%;
+    }
+  }
+
+  .worker{
+    width: 240px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+.worker-pic{
+  width: 100%;
+  margin-bottom: -10px;
+  height: 240px;
+}
+
+.worker-info{
+  background-color: $main-blue;
+  padding: 30px 30px;
+  height: 120px;
+  margin: auto;
+  h3, p, a{
+    color: white;
+  }
+  p, a{
+    font-size: 13px;
+  }
+
+}
+
+.worker-line{
+  height: 2px;
+  width: 100%;
+  background: $gradient-right;
+  margin: 1.5vh 0;
+}
+
+.worker-topline{
+  height: 15px;
+  width: 100%;
+  background: $gradient-right;
+  position: relative;
+  margin-bottom: -15px;
+
+
+}
+
+.worker-contact{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1vh;
+  img{
+    margin-right: 0.5vh;
+  }
+}
+
+.worker-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 4vh;
+  z-index: 2;
+  margin-right: -180px;
+  position: relative;
+}
 
 
 
@@ -603,7 +735,7 @@ textarea {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 19;
     width: 100%;
     height: 100%;
     -webkit-transition: all 0.3s ease-in-out;
