@@ -24,25 +24,20 @@
 	});
   //navbar scroll change color end
 
+  (function() {
 
+    var quotes = $(".quotes");
+    var quoteIndex = -1;
 
- //slider
-var currentSlide = 1;
-var $slider = $(".slides");
-var slideCount = $slider.children().length+1;
-var slideTime = 2000;
-var animationTime = 800;
-
-setInterval(function(){
-  $slider.animate({
-    marginLeft : '-=900px'
-  } , animationTime , function() {
-    currentSlide++;
-    if(currentSlide === slideCount) {
-      currentSlide = 1;
-      $(this).css("margin-left" , "0px");
+    function showNextQuote() {
+        quoteIndex++;
+        quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(2000)
+            .delay(2000)
+            .fadeOut(2000, showNextQuote);
     }
-  });
-}, slideTime);
 
+    showNextQuote();
+
+})();
  });
