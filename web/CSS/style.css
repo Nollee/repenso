@@ -1,13 +1,13 @@
-.cta, .contact-form, #contact-form { display: flex; align-items: center; justify-content: center; align-content: center; }
+.cta, .readmore, .contact-form, #contact-form { display: flex; align-items: center; justify-content: center; align-content: center; }
 
 #hero-forside, .cases-text h1 { font-size: 40px; color: white; font-weight: 700; }
 
-.cta { font-size: 30px; width: 150px; height: auto; color: white; background-image: linear-gradient(to right, #f5580f 0%, #f5ba25 51%, #f5580f 100%); padding: 15px 25px; background-size: 500%; }
+.cta, .readmore { font-size: 30px; width: 150px; height: auto; color: white; background-image: linear-gradient(to right, #f5580f 0%, #f5ba25 51%, #f5580f 100%); padding: 15px 25px; background-size: 500%; background-position: left; }
 
 /*rules*/
 * { margin: 0; padding: 0; font-family: futura-pt, sans-serif; }
 
-body { background-color: #001624; overflow-x: hidden; height: 2000px; }
+body { background-color: #001624; overflow-x: hidden; }
 
 /*rules end*/
 a { text-decoration: none; font-weight: 700; font-style: normal; }
@@ -84,9 +84,7 @@ textarea { resize: none; }
 
 .hero-content { width: 90%; height: 80vh; margin: auto; display: flex; flex-direction: column; justify-content: space-around; padding-top: 80px; }
 
-.cta { background-position: left; }
-
-.cta:hover { animation-name: gradient; animation-duration: 2s; animation-iteration-count: 1; animation-fill-mode: forwards; }
+.cta:hover, .readmore:hover { animation-name: gradient; animation-duration: 2s; animation-iteration-count: 1; animation-fill-mode: forwards; }
 
 @keyframes gradient { 0% { background-position: 0% 50%; }
   100% { background-position: 100%; } }
@@ -96,6 +94,8 @@ textarea { resize: none; }
 .hero-text p { font-size: 20px; }
 
 .hero-desc, .hero-quote { width: 40%; }
+
+.readmore { width: 40%; margin: auto; margin-top: 20px; font-size: 1.5em; }
 
 /*index end*/
 /* cases */
@@ -107,11 +107,15 @@ textarea { resize: none; }
 
 #case-wrapper { display: flex; flex-direction: row; width: 90%; justify-content: space-between; margin: auto; }
 
-.cases { text-align: center; color: white; display: flex; flex-direction: column; justify-content: flex-end; height: 80vh; width: 100%; }
+.cases { text-align: center; color: white; display: flex; flex-direction: column; height: 100vh; width: 20%; margin: auto; }
 
-.case-toppi { width: 250px; }
+.cases h2 { padding-top: 20px; }
 
-.person { position: relative; width: 200px; }
+.cases-img { margin-left: 0px; }
+
+.case-toppic { width: 90%; margin-right: -40px; }
+
+.person { width: 90%; margin-top: -80px; }
 
 /* cases end */
 /* Mobile Navigation */
