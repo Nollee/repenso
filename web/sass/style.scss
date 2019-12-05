@@ -296,7 +296,7 @@ textarea {
 }
 
 .hero-desc, .hero-quote{
-  width: 40%;
+  width: 50%;
 }
 
 .readmore{
@@ -306,7 +306,17 @@ textarea {
   margin-top: 20px;
   font-size: 1.5em;
 }
-
+.quotes {
+  @extend %hide;
+  color: white;
+  text-align: right;
+  p {
+    font-weight: 200;
+  }
+}
+.quote-place p {
+  font-size: 10px;
+}
 
 
 /*index end*/
@@ -365,17 +375,6 @@ textarea {
   width: 90%;
   margin-top: -80px;
 }
-
-.quotes {
-  display: none;
-  color: white;
-}
-
-
-
-
-
-
 
 
 /* cases end */
@@ -503,5 +502,5 @@ textarea {
   float: left;
   height: 400px;
   width: 900px;
-  color: white; 
+  color: white;
 }
