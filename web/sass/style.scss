@@ -318,24 +318,29 @@ textarea {
 
 /*index*/
 #hero-forside{
+  @extend %center;
   width: 100%;
   height: 100vh;
   background-image: url("../images/heroforside.jpg");
   background-position: center;
   background-size: cover;
-  @extend %h1-white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  color: white;
+  h1 {
+    @extend %h1-white;
+    font-size: 85px;
+  }
 }
-
 .hero-content{
   width: 90%;
   height: 80vh;
+  position: relative;
+  h1 {
+    padding-top: 50px; 
+  }
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-top: 80px;
 }
 .cta {
@@ -357,6 +362,7 @@ textarea {
 .hero-text{
   display: flex;
   justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 .hero-desc {
@@ -383,13 +389,13 @@ textarea {
   @extend %hide;
   color: white;
   text-align: right;
-}
-.quotes-quote, .quotes-person {
-  font-size: 20px;
-  font-weight: 200;
-}
-.quote-place{
-  font-size: 15px;
+  p {
+    font-weight: 200;
+    font-size: 20px;
+  }
+  .quote-place {
+    font-size: 15px;
+  }
 }
 /*index end*/
 
@@ -593,4 +599,3 @@ textarea {
   }
 }
 /* Mobile Navigation End */
- 
