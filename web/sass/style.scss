@@ -36,6 +36,18 @@ background-size: 500%;
   background-position: left;
 }
 
+%readmore{
+  color: white;
+  background-image: linear-gradient(to right, #f5580f 0%, #f5ba25 51%, #f5580f 100%);
+  background-size: 500%;
+    background-position: left;
+  width: 40%;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 22px;
+  padding: 2% 4%;
+}
+
 
 //Inheritances End//
 
@@ -175,6 +187,62 @@ li {
 }
 /* Nav animation end*/
 
+//Case Section for frontpage START
+
+.casesection{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  background-color: $main-beige;
+  padding: 50px;
+    h2{
+      position: relative;
+      @extend %h1-blue;
+      margin-bottom:-100px;
+      z-index: 2;
+      font-size: 70px;
+    }
+    h3{
+      position: relative;
+      @extend %h1-blue;
+      margin-top: 5px;
+      margin-left: 350px;
+      z-index: 2;
+      font-size: 30px;
+    }
+    .ownerphoto{
+      position: relative;
+      width: 300px;
+      z-index: 2;
+      margin-bottom: -50px;
+    }
+    .casephoto{
+      width: 800px;
+      margin-left: -150px;
+    }
+    .casecta{
+      display: flex;
+      margin: 50px auto;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .cta{
+      width: 80px;
+      font-size: 20px;
+      height: 15px;
+    }
+    .casectatext{
+      margin: 0 25px 0 0;
+      font-size: 25px;
+    }
+    .casecontent{
+      margin: auto;
+    }
+}
+
+
+
 /* Footer */
 footer {
   width: 100%;
@@ -297,6 +365,9 @@ textarea {
   }
 }
 
+.hero-desc p{
+  font-size: 20px;
+}
 .hero-desc, .hero-quote{
   width: 50%;
 }
@@ -319,7 +390,7 @@ textarea {
 }
 .quote-place{
   font-size: 15px;
-} 
+}
 /*index end*/
 
 /* cases */
@@ -379,19 +450,45 @@ textarea {
 }
 
 .readmore{
-  color: white;
-  background-image: linear-gradient(to right, #f5580f 0%, #f5ba25 51%, #f5580f 100%);
-  background-size: 500%;
-    background-position: left;
-  width: 40%;
-  margin: auto;
-  margin-top: 20px;
-  font-size: 22px;
-  padding: 2% 4%;
+@extend %readmore;
 }
 
 
 /* cases end */
+
+/* about.html */
+  .about-container{
+        margin: auto;
+    margin-top: 150px;
+    width: 90%;
+  }
+
+  #about-heading{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    h1{
+      @extend %h1-white;
+    }
+  }
+
+  #line-left, #line-right{
+  background-color: white;
+  height: 3px;
+  }
+
+  #line-left{
+    width: 15%;
+  }
+
+  #line-right{
+    width: 60%;
+  }
+
+
+
+/* about.html end */
 
   /* Mobile Navigation */
 @media only screen and (max-width: 800px) {
@@ -496,3 +593,4 @@ textarea {
   }
 }
 /* Mobile Navigation End */
+ 
