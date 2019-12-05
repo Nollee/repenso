@@ -20,7 +20,7 @@ $gradient-bottom: linear-gradient(to bottom, #ff6821 0%, #f18c27 100%);
   font-weight: 700;
 }
 %h1-white {
-  font-size: 40px;
+  font-size: 60px;
   color: white;
   font-weight: 700;
 }
@@ -82,7 +82,7 @@ li {
 .subpage-nav {
   background-color: $main-beige;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   border-image: $gradient-right;
   border-image-slice: 1;
   border-bottom: 3px solid transparent;
@@ -456,13 +456,13 @@ textarea {
 /* about.html */
   .about-container{
         margin: auto;
-    margin-top: 150px;
+    margin-top: 20vh;
     width: 90%;
   }
 
   #about-heading{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     h1{
@@ -481,6 +481,28 @@ textarea {
 
   #line-right{
     width: 60%;
+  }
+
+  #about-intro{
+    margin-top: 10vh;
+    background-color: $main-beige;
+    h2{
+      color: $main-blue;
+      font-size: 40px;
+      font-weight: 700;
+    }
+    p{
+      margin-top: 3vh;
+      color: $main-blue;
+      font-weight: 200;
+    }
+  }
+  #about-intro img{
+    width: 100%;
+  }
+
+  .about-who{
+    padding: 70px 50px;
   }
 
 
