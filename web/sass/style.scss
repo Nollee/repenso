@@ -175,6 +175,62 @@ li {
 }
 /* Nav animation end*/
 
+//Case Section for frontpage START
+
+.casesection{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  background-color: $main-beige;
+  padding: 50px;
+    h2{
+      position: relative;
+      @extend %h1-blue;
+      margin-bottom:-100px;
+      z-index: 2;
+      font-size: 70px;
+    }
+    h3{
+      position: relative;
+      @extend %h1-blue;
+      margin-top: 5px;
+      margin-left: 350px;
+      z-index: 2;
+      font-size: 30px;
+    }
+    .ownerphoto{
+      position: relative;
+      width: 300px;
+      z-index: 2;
+      margin-bottom: -50px;
+    }
+    .casephoto{
+      width: 800px;
+      margin-left: -150px;
+    }
+    .casecta{
+      display: flex;
+      margin: 50px auto;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .cta{
+      width: 80px;
+      font-size: 20px;
+      height: 15px;
+    }
+    .casectatext{
+      margin: 0 25px 0 0;
+      font-size: 25px;
+    }
+    .casecontent{
+      margin: auto;
+    }
+}
+
+
+
 /* Footer */
 footer {
   width: 100%;
