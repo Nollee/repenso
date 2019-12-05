@@ -33,6 +33,7 @@ color: white;
 background-image: linear-gradient(to right, #f5580f 0%, #f5ba25 51%, #f5580f 100%);
 padding: 15px 25px;
 background-size: 500%;
+  background-position: left;
 }
 
 
@@ -50,7 +51,6 @@ background-size: 500%;
 body {
   background-color: $main-blue;
   overflow-x: hidden;
-  height: 2000px;
 }
 
 /*rules end*/
@@ -328,10 +328,9 @@ textarea {
 }
 .cta {
   @extend %cta;
-  background-position: left;
 }
 
-.cta:hover{
+.cta:hover, .readmore:hover{
   animation-name: gradient;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -353,7 +352,26 @@ textarea {
 }
 
 .hero-desc, .hero-quote{
+  width: 50%;
+}
+
+.readmore{
+  @extend %cta;
   width: 40%;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+.quotes {
+  @extend %hide;
+  color: white;
+  text-align: right;
+  p {
+    font-weight: 200;
+  }
+}
+.quote-place p {
+  font-size: 10px;
 }
 
 
@@ -385,6 +403,7 @@ textarea {
   width: 90%;
   justify-content: space-between;
   margin: auto;
+    height: 90vh;
 }
 
 .cases{
@@ -392,24 +411,39 @@ textarea {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  height: 80vh;
-  width: 100%;
+
+  width: 20%;
+  margin: auto;
+  h2{
+    padding-top: 20px;
+  }
 }
 
-.case-toppi{
-    width: 250px;
+.cases-img{
+  margin-left: 0px;
+}
+
+.case-toppic{
+    width: 90%;
+    margin-right: -40px;
 }
 
 .person{
-    position: relative;
-    width: 200px;
-
+  width: 90%;
+  margin-top: -100px;
 }
 
-
-
-
+.readmore{
+  color: white;
+  background-image: linear-gradient(to right, #f5580f 0%, #f5ba25 51%, #f5580f 100%);
+  background-size: 500%;
+    background-position: left;
+  width: 40%;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 22px;
+  padding: 2% 4%;
+}
 
 
 /* cases end */
