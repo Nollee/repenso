@@ -108,3 +108,8 @@ textarea { resize: none; }
   .overlay.slide { opacity: 0.8; visibility: visible; } }
 
 /* Mobile Navigation End */
+.slider { width: 900px; height: 400px; margin: 0 auto; overflow: hidden; }
+
+.slides { display: block; width: 8000; height: 400px; list-style: none; margin: 0px; padding: 0px; }
+
+.slide { float: left; height: 400px; width: 900px; color: white; }
