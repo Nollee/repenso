@@ -30,9 +30,12 @@ width: 150px;
 height: auto;
 @extend %center;
 color: white;
-background-image: $gradient-bottom;
+background-image: linear-gradient(to right, #f5580f 0%, #f5ba25 51%, #f5580f 100%);
 padding: 15px 25px;
+background-size: 500%;
 }
+
+
 //Inheritances End//
 
 /*rules*/
@@ -50,10 +53,6 @@ body {
   height: 2000px;
 }
 
-h1{
-  font-size: 50px;
-  font-weight: 700;
-}
 /*rules end*/
 
 a {
@@ -257,18 +256,107 @@ textarea {
   background-position: center;
   background-size: cover;
   @extend %h1-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .hero-content{
   width: 90%;
+  height: 80vh;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 80px;
 }
 .cta {
   @extend %cta;
+  background-position: left;
+}
+
+.cta:hover{
+  animation-name: gradient;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes gradient{
+  0% {background-position: 0% 50%}
+  100%  {background-position: 100%}
+}
+
+.hero-text{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  p{
+    font-size: 20px;
+  }
+}
+
+.hero-desc, .hero-quote{
+  width: 40%;
 }
 
 
 /*index end*/
+
+/* cases */
+
+.cases-text{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 50px;
+  h1{
+    @extend %h1-white;
+  }
+  h3{
+    color: white;
+    font-size: 21px;
+    font-weight: 500;
+  }
+}
+.cases-intro{
+  margin-top: 120px;
+
+}
+#case-wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.cases{
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 80vh;
+  width: 100%;
+}
+
+.case-toppi{
+    width: 250px;
+}
+
+.person{
+    position: relative;
+    width: 200px;
+
+}
+
+
+
+
+
+
+/* cases end */
 
   /* Mobile Navigation */
 @media only screen and (max-width: 800px) {
