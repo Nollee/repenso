@@ -41,11 +41,11 @@ background-size: 500%;
   background-image: linear-gradient(to right, #f5580f 0%, #f5ba25 51%, #f5580f 100%);
   background-size: 500%;
     background-position: left;
-  width: 40%;
   margin: auto;
+  width: 100px;
   margin-top: 20px;
   font-size: 22px;
-  padding: 2% 4%;
+  padding: 8px 13px;
 }
 
 
@@ -60,6 +60,7 @@ background-size: 500%;
 
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 
@@ -127,6 +128,7 @@ li {
   display: flex;
   justify-content: space-between;
   width: 90%;
+  max-width: 1375px;
   margin: auto;
 }
 
@@ -379,13 +381,6 @@ textarea {
   width: 50%;
 }
 
-.readmore{
-  @extend %cta;
-  width: 40%;
-  margin: auto;
-  margin-top: 20px;
-  font-size: 1.5em;
-}
 .quotes {
   @extend %hide;
   color: white;
@@ -412,8 +407,6 @@ textarea {
   }
   h3{
     color: white;
-    font-size: 21px;
-    font-weight: 500;
   }
 }
 .cases-intro{
@@ -424,9 +417,9 @@ textarea {
   display: flex;
   flex-direction: row;
   width: 90%;
+  max-width: 1400px;
   justify-content: space-between;
   margin: auto;
-    height: 90vh;
 }
 
 .cases{
@@ -439,6 +432,7 @@ textarea {
   margin: auto;
   h2{
     padding-top: 20px;
+    font-size: 28px;
   }
 }
 
@@ -467,7 +461,8 @@ textarea {
   .about-container{
         margin: auto;
     margin-top: 18vh;
-    width: 80%;
+    width: 90%;
+    max-width: 1375px;
   }
 
   #about-heading{
@@ -528,6 +523,7 @@ textarea {
     a{
     font-size: 20px;
     color: #FF6C25;
+    margin-right: 8px;
     }
     a:hover{
       color: #FF5125;
@@ -585,21 +581,21 @@ visibility: hidden;
   }
 
   .worker{
-    width: 240px;
-    margin-right: 20px;
+    width: 230px;
+    margin-right: 40px;
     margin-top: 20px;
   }
 
 .worker-pic{
   width: 100%;
   margin-bottom: -10px;
-  height: 240px;
+  height: 230px;
 }
 
 .worker-info{
   background-color: $main-blue;
-  padding: 30px 30px;
-  height: 120px;
+  padding: 25px 25px;
+  height: 125px;
   margin: auto;
   h3, p, a{
     color: white;
@@ -614,7 +610,7 @@ visibility: hidden;
   height: 2px;
   width: 100%;
   background: $gradient-right;
-  margin: 1.5vh 0;
+  margin: 15px 0;
 }
 
 .worker-topline{
@@ -630,7 +626,7 @@ visibility: hidden;
 .worker-contact{
   display: flex;
   align-items: center;
-  margin-bottom: 1vh;
+  margin-bottom: 5px;
   img{
     margin-right: 0.5vh;
   }
@@ -641,8 +637,8 @@ visibility: hidden;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 4vh;
-  z-index: 2;
-  margin-right: -180px;
+  z-index: 10;
+  margin-right: -220px;
   position: relative;
 }
 
@@ -650,8 +646,31 @@ visibility: hidden;
 
 /* about.html end */
 
-  /* Mobile Navigation */
+@media only screen and (max-width: 1050px) {
+  /* about.html */
+  .worker-container{
+    margin-right: -300px;
+  }
+  .city-pic{
+    width: 42%;
+  }
+  .worker{
+    margin-right: 20px;
+  }
+
+  /* about.html end */
+
+  /* cases */
+  .cases{
+    width: 27%;
+    h2{
+      font-size: 20px;
+    }
+  }
+}
+
 @media only screen and (max-width: 800px) {
+    /* Mobile Navigation */
   .navlink {
     display: none;
   }
@@ -660,12 +679,10 @@ visibility: hidden;
     display: flex;
   }
 
-  nav {
-    padding: 10px;
-  }
+
 
   #logo, #logo-frontpage  {
-    width: 60%;
+    width: 140px;
     height: auto;
   }
 
@@ -751,5 +768,111 @@ visibility: hidden;
     opacity: 0.8;
     visibility: visible;
   }
+
+  /* about.html */
+  .about-city{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .worker-container{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .about-container{
+    width: 85%;
+  }
+
+  .city-text{
+    width: 90%;
+  }
+
+  .worker{
+
+  }
+
+  .city-pic{
+    display: none;
+  }
+
+  #line-right{
+    width: 50%;
+  }
+
+  /* about.html end */
+
+  /* cases */
+  .cases{
+    width: 30%;
+  }
+  .cases-text{
+    h1{
+      font-size: 50px;
+    }
+  }
+
+  /* cases end */
 }
+
+@media only screen and (max-width: 600px) {
+
+  /* about.html */
+  .city-text{
+    padding: 10px 10px  ;
+    width: 100%;
+    margin: auto;
+  }
+  .about-container{
+    width: 95%;
+  }
+
+  .departments{
+    flex-direction: column;
+  }
+
+  .city-icon a{
+    font-size: 12px;
+  }
+
+  .worker-container{
+    margin: auto;
+    justify-content: center;
+  }
+
+  #about-heading{
+    h1{
+      font-size: 40px;
+    }
+    #line-left{
+      width: 10%;
+    }
+
+  }
+/* about.html end */
+
+/* cases */
+#case-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.cases{
+  width: 90%;
+  margin-top: 30px;
+  .case-toppic{
+    display: none;
+  }
+  .person{
+    margin: 0;
+  }
+}
+
+/* case end */
+
+}
+
 /* Mobile Navigation End */
+
+/* about.html */
