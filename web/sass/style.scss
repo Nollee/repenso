@@ -858,9 +858,14 @@ visibility: hidden;
   flex-direction: column;
 }
 
+.cases-text{
+  h1{
+    font-size: 40px;}
+}
+
 .cases{
   width: 90%;
-  margin-top: 30px;
+  margin-top: 45px;
   .case-toppic{
     display: none;
   }
