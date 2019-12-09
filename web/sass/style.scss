@@ -335,7 +335,7 @@ textarea {
   height: 80vh;
   position: relative;
   h1 {
-    padding-top: 50px; 
+    padding-top: 50px;
   }
   margin: auto;
   display: flex;
@@ -491,10 +491,183 @@ textarea {
   #line-right{
     width: 60%;
   }
-
-
-
 /* about.html end */
+
+/*service*/
+#service-main {
+  @extend %center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/service-background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.service-main-content {
+  @extend %center;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+.service-card-container {
+  width: 70%;
+  @extend %center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+.service-card {
+  margin: 15px;
+  @extend %center;
+  flex-direction: column;
+  width: 280px;
+  background-color: $main-beige;
+  h3 {
+    @extend %h1-white;
+    padding: 10px 0 10px;
+    width: 100%;
+    text-align: center;
+    background-image: $gradient-right;
+  }
+  .cta {
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+}
+.service-card-p {
+  font-weight: 600;
+  margin-top: 15px;
+  color: $main-blue;
+}
+.service-card-icons-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 10px;
+}
+.service-card-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+  img {
+    height: 40px;
+    margin-right: 15px;
+  }
+  p {
+    color: $main-blue;
+  }
+}
+#service-about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: $main-beige;
+  width: 100%;
+}
+.service-h2 {
+  h2 {
+    font-weight: 700;
+    font-size: 30px;
+    margin: 20px;
+  }
+  width: 100%;
+  @extend %center;
+}
+.service-about-container {
+  padding-top: 20px;
+width: 30%;
+display: flex;
+justify-content: flex-start;
+flex-direction: column;
+text-align: center;
+}
+.pack-desc-section {
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+  background-color: $main-beige;
+  @extend %center;
+}
+.pack-desc {
+  @extend %center; 
+  flex-direction: row; 
+  justify-content: flex-start; 
+  margin-top: 50px;
+  background-color: $main-blue;
+  width: 85%;
+  color: white;
+  h2 {
+    font-size: 65px;
+  }
+  h5 {
+    font-size: 45px;
+  }
+} 
+.pack-desc-content {
+  padding-top: 30px;
+  padding-bottom: 30px; 
+  width: 60%; 
+  display: flex;
+  justify-content: center; 
+ align-items: center; 
+  flex-direction: row; 
+}  
+.pack-desc-text {
+  width: 50%; 
+  display: flex;
+  flex-direction: column; 
+}
+.pack-desc-cta {
+  width: 100%;   
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  p {
+    font-size: 15px;
+    font-weight: 700; 
+  }
+  .cta {
+    margin-left: 10px; 
+    font-size: 20px; 
+    height: 10px;
+    width: 50px; 
+    margin-top: 15px;
+    margin-bottom: 15px;      
+  }
+}
+.pack-desc-icons-container {
+  width: 40%; 
+}
+.pack-desc-icons {
+  padding-left: 20px; 
+  padding-top: 20px; 
+  display: flex;
+  flex-direction: row;  
+  align-items: center; 
+  p {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 700;  
+  }
+  img {
+    height: 40px; 
+  }
+}
+.pack-desc-img {
+  width: 550px; 
+  margin-right: -200px; 
+}
+/*
+.pack-desc-img {
+ background-image: url("../images/tinc_case.jpg");
+ width: 300px; 
+}*/
+/*service end*/ 
+
 
   /* Mobile Navigation */
 @media only screen and (max-width: 800px) {
