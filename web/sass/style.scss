@@ -19,6 +19,13 @@ $gradient-bottom: linear-gradient(to bottom, #ff6821 0%, #f18c27 100%);
   color: $main-blue;
   font-weight: 700;
 }
+
+@mixin h1-blue {
+  font-size: 60px;
+  color: $main-blue;
+  font-weight: 700;
+}
+
 %h1-white {
   font-size: 60px;
   color: white;
@@ -238,7 +245,7 @@ li {
     .casephoto{
       filter: opacity(0);
       width: 800px;
-      margin-left: -150px;
+      margin: 0 0 0 -150px ;
       -webkit-animation-name: fade;
       -ms-animation-name: fade;
       -webkit-animation-duration: 1s;
@@ -1584,6 +1591,38 @@ flex-direction: column;
 }
 }
 /*service.html end*/
+
+// Casesection start
+.casesection_m{
+  background-color: $main-beige;
+}
+
+.casecontent_m{
+  text-align: center;
+  padding: 10%;
+  margin: auto;
+    .ownerphoto_m{
+      position: relative;
+    }
+    .photoframe {
+      display: grid;
+    }
+    .photo:first-of-type{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    }
+    .photo:last-of-type{
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+    }
+    img{
+      width: 100%;
+    }
+}
+
+
+// Casesection end
+
 }
 
 

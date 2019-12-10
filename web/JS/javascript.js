@@ -44,7 +44,8 @@
 
 (function() {
 
-  var quotes = $(".casecontent");
+  var quotes = $('.casecontent, .casecontent_m');
+  console.log(quotes);
   var quoteIndex = -1;
 
   function showNextQuote() {
@@ -58,5 +59,6 @@
   showNextQuote();
 
 })();
+
 
 });
