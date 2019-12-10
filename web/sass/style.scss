@@ -185,7 +185,7 @@ li {
   background-color: $main-beige;
   padding: 50px;
     h2{
-      opacity: 0;
+      filter: opacity(0);
       position: relative;
       @extend %h1-blue;
       margin-bottom:-100px;
@@ -197,7 +197,7 @@ li {
       animation-delay: 0.3s;
     }
     h3{
-      opacity: 0;
+      filter: opacity(0);
       position: relative;
       @extend %h1-blue;
       margin-top: 5px;
@@ -210,7 +210,7 @@ li {
       animation-delay: 1.2s;
     }
     .ownerphoto{
-      opacity: 0;
+      filter: opacity(0);
       position: relative;
       width: 300px;
       z-index: 2;
@@ -220,21 +220,21 @@ li {
       animation-fill-mode: forwards;
     }
 
-
-
-    @keyframes fade{
-      from { opacity: 0%; }
-      to { opacity: 100%; }
-    }
-
     .casephoto{
-      opacity: 0;
+      filter: opacity(0);
       width: 800px;
       margin-left: -150px;
+      -webkit-animation-name: fade;
+      -ms-animation-name: fade;
+      -webkit-animation-duration: 1s;
+      -ms-animation-duration: 1s;
+      -webkit-animation-delay: 0.8s;
+      -ms-animation-delay: 0.8s;
+      -webkit-animation-fill-mode: forwards;
+      -ms-animation-fill-mode: forwards;
       animation-name: fade;
       animation-duration: 1s;
       animation-delay: 0.8s;
-      animation-fill-mode: forwards;
     }
     .casecta{
       display: flex;
@@ -254,6 +254,12 @@ li {
     .casecontent{
       margin: auto;
       display: none;
+    }
+
+
+    @keyframes fade{
+      from { filter: opacity(0); }
+      to { filter: opacity(1); }
     }
 
 }
