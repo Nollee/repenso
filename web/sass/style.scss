@@ -155,7 +155,7 @@ li {
 /* Nav animation*/
 
 
-.link a::after, .departments a::after {
+.navlink ul li a::after, .departments a::after {
   content: '';
   display: block;
   width: 0;
@@ -164,7 +164,7 @@ li {
   transition: width 0.3s;
 }
 
-.link a:hover::after, .departments a:hover::after {
+.navlink ul li a:hover::after, .departments a:hover::after {
   width: 100%;
   transition: width 0.3s;
 }
@@ -439,19 +439,20 @@ textarea {
   margin-bottom: 50px;
   h1{
     @extend %h1-white;
+    font-size: 30px;
   }
   h3{
     color: white;
   }
 }
 .cases-intro{
-  margin-top: 120px;
+  margin-top: 100px;
 
 }
 #case-wrapper{
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 65%;
   max-width: 1400px;
   justify-content: space-between;
   margin: auto;
@@ -467,7 +468,7 @@ textarea {
   margin: auto;
   h2{
     padding-top: 20px;
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 
@@ -482,7 +483,7 @@ textarea {
 
 .person{
   width: 90%;
-  margin-top: -100px;
+  margin-top: -130px;
 }
 
 .readmore{
@@ -496,7 +497,7 @@ textarea {
   .about-container{
         margin: auto;
     margin-top: 18vh;
-    width: 90%;
+    width: 75%;
     max-width: 1375px;
   }
 
@@ -527,10 +528,22 @@ textarea {
   #about-intro{
     margin-top: 5vh;
     background-color: $main-beige;
+  }
+  #about-intro img{
+    width: 100%;
+  }
+
+  #overview-mobile{
+    display: none;
+  }
+
+  .about-who{
+    padding: 15px 50px;
     h2{
       color: $main-blue;
       font-size: 40px;
       font-weight: 700;
+      margin-top: 30px;
     }
     h3{
       color: $main-blue;
@@ -540,22 +553,17 @@ textarea {
       margin-bottom: 2vh;
     }
     p{
-      margin-top: 3vh;
+      margin-top: 10px;
       color: $main-blue;
       font-weight: 200;
     }
-  }
-  #about-intro img{
-    width: 100%;
-  }
-
-  .about-who{
-    padding: 60px 50px;
   }
   .departments{
     width: 35%;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
     a{
     font-size: 20px;
     color: #FF6C25;
@@ -576,7 +584,7 @@ textarea {
   div.anchor{
     display: block;
 position: relative;
-top: -100px;
+top: -20px;
 visibility: hidden;
   }
 
@@ -674,7 +682,7 @@ visibility: hidden;
   flex-wrap: wrap;
   margin-top: 4vh;
   z-index: 10;
-  margin-right: -220px;
+  margin-right: -420px;
   position: relative;
 }
 /*service*/
@@ -915,6 +923,9 @@ text-align: center;
 
 }
 
+#ry-heading{
+  font-size: 45px;
+}
 }
 
 .video-wrapper{
@@ -1123,7 +1134,7 @@ text-align: center;
   /*index.html end*/
   /* about.html */
   .worker-container{
-    margin-right: -300px;
+    margin-right: -500px;
   }
   .city-pic{
     width: 42%;
@@ -1224,18 +1235,48 @@ text-align: center;
     flex-direction: column;
     position: fixed;
     margin-top: 23px;
-    right: -190px;
-    width: 180px;
+    right: -360px;
+    width: 60%;
+    max-width: 360px;
     height: 100%;
     background-color: $main-beige;
     transition: all 0.6s ease;
+    padding-top: 20px;
 
     a {
       color: $main-blue;
-      border-bottom: 1px solid $main-blue;
-      padding: 15px 10px;
+      padding: 15px 30px;
     }
   }
+
+  .sidebar-line{
+    height: 2px;
+    margin: 10px 20px 10px 30px;
+    background: $gradient-right;
+  }
+
+  .sidebar-contact{
+    display: flex;
+    font-size: 14px;
+    margin-left: 30px;
+    img{
+      width: 25px;
+    }
+    a{
+      padding: 15px 20px;
+    }
+  }
+
+  .linkedin-sidebar{
+      height: auto;
+      margin: auto;
+      margin-top: 40px;
+      img{
+          width: 60px;
+      }
+  }
+
+
 
   .burger, .burger-frontpage {
     position: absolute;
@@ -1273,14 +1314,91 @@ text-align: center;
   }
 
   #line1.slide {
-    transform: rotate(-45deg) translate(2px, 8px);
+    transform: rotate(45deg) translateY(15px);
   }
 
   #line3.slide {
-    transform: rotate(45deg) translate(-6px, -16px);
+    transform: rotate(-45deg) translateY(-15px);
   }
 
-/* https://www.jqueryscript.net/menu/Off-canvas-Burger-Menu-jQuery-CSS3.html */
+
+  .sidebar.slide a:nth-child(1){
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+     -o-animation: fadein 1s; /* Opera < 12.1 */
+        animation: fadein 0.3s;
+        animation-delay: 0.1s;
+  }
+
+  .sidebar.slide a:nth-child(2){
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+     -o-animation: fadein 2s; /* Opera < 12.1 */
+        animation: fadein 0.5s;
+        animation-delay: 0.1s;
+
+  }
+
+  .sidebar.slide a:nth-child(3){
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 3s; /* Firefox < 16 */
+    -ms-animation: fadein 3s; /* Internet Explorer */
+     -o-animation: fadein 3s; /* Opera < 12.1 */
+        animation: fadein 0.7s;
+        animation-delay: 0.1s;
+
+  }
+
+  .sidebar.slide a:nth-child(4){
+    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 4s; /* Firefox < 16 */
+    -ms-animation: fadein 4s; /* Internet Explorer */
+     -o-animation: fadein 4s; /* Opera < 12.1 */
+        animation: fadein 0.9s;
+        animation-delay: 0.1s;
+
+  }
+
+  .sidebar.slide a:nth-child(5){
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 5s; /* Firefox < 16 */
+    -ms-animation: fadein 5s; /* Internet Explorer */
+     -o-animation: fadein 5s; /* Opera < 12.1 */
+        animation: fadein 1.1s;
+        animation-delay: 0.1s;
+
+  }
+
+  .sidebar-contact.slide{
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 5s; /* Firefox < 16 */
+    -ms-animation: fadein 5s; /* Internet Explorer */
+     -o-animation: fadein 5s; /* Opera < 12.1 */
+        animation: fadein 1.3s;
+        animation-delay: 0.1s;
+
+  }
+
+
+
+
+  @keyframes fadein {
+    from {
+      transform: translateX(30px);
+      opacity: 0.5;
+    }
+    to   {
+      transform: translateX(0);
+      opacity: 1; }
+}
+
+
+
+
+
+  /* https://www.jqueryscript.net/menu/Off-canvas-Burger-Menu-jQuery-CSS3.html */
   .overlay {
     position: fixed;
     top: 0;
@@ -1339,6 +1457,9 @@ text-align: center;
   /* cases */
   .cases{
     width: 30%;
+    h2{
+      font-size: 15px;
+    }
   }
   .cases-text{
     h1{
@@ -1425,6 +1546,20 @@ h3{
 @media only screen and (max-width: 600px) {
 
   /* about.html */
+
+  #repenso-overview{
+    display: none;
+  }
+
+  #overview-mobile{
+    display: block;
+  }
+  .about-who{
+    padding: 5px 10px;
+    h2{
+      font-size: 30px;
+    }
+  }
   .city-text{
     padding: 10px 10px  ;
     width: 100%;
@@ -1435,11 +1570,16 @@ h3{
   }
 
   .departments{
-    flex-direction: column;
+    a{
+      font-size: 17px;
+      margin-right: 13px;
+    }
   }
 
-  .city-icon a{
-    font-size: 12px;
+  .city-icon {
+    a, p{
+    font-size: 11px;
+  }
   }
 
   .worker-container{
@@ -1564,6 +1704,8 @@ h3{
 .othercase-text{
   width: 90%;
 }
+
+/* services */
 
 .service-about-container {
   width: 80%;
