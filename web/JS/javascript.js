@@ -1,8 +1,5 @@
  $(document).ready(function() {
 
-$("#index").scrollTop(0); 
-
-
    $(".burger, .burger-frontpage, .overlay").click(function() {
      $('.mobileNav div, .overlay').toggleClass("slide");
    });
