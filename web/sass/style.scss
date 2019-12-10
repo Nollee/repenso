@@ -368,6 +368,9 @@ textarea {
     font-size: 85px;
   }
 }
+.hero-desc-mobile {
+  display: none;
+}
 .hero-content{
   width: 90%;
   height: 80vh;
@@ -403,14 +406,10 @@ textarea {
   justify-content: center;
   width: 100%;
 }
-.hero-desc {
+.hero-desc, .hero-desc-mobile {
   p {
     font-size: 20px;
   }
-}
-
-.hero-desc p{
-  font-size: 20px;
 }
 .hero-desc, .hero-quote{
   width: 50%;
@@ -841,11 +840,12 @@ text-align: center;
 /*service end*/
 @media only screen and (max-width: 1300px) {
   /*index.html*/
-  .hero-content {
+  #hero-forside {
     h1 {
-      padding-top: 25px;
-      font-size: 70px !important;
+      font-size: 70px;
     }
+  }
+  .hero-content {
     justify-content: space-between;
   }
   /*index.html end*/
@@ -885,15 +885,22 @@ text-align: center;
   /*index.html*/
   .hero-content {
     h1 {
-      font-size: 50px !important;
-      justify-content: flex-end;
+      font-size: 50px;
+
     }
   }
   .hero-text {
-    padding-top: 50px !important;
-    .hero-desc {
-      display: none;  
+    padding-top: 0px;
+    justify-content: flex-start;
+    .quotes {
+      text-align: left;
     }
+  }
+  .hero-desc-mobile {
+    display: block;
+  }
+  .hero-desc {
+    display: none;
   }
   /*index.html end*/
   /* about.html */
@@ -1059,7 +1066,41 @@ text-align: center;
     opacity: 0.8;
     visibility: visible;
   }
-
+/*index.html*/
+.hero-content {
+  justify-content: space-between;
+  align-items: center;
+  p {
+    font-size: 35px;
+  }
+  h1, .hero-desc-mobile {
+    text-align: center;
+    padding: 0px;
+  }
+  .cta {
+    margin-top: 15px;
+  }
+}
+.hero-text {
+  padding: 0px !important;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+  }
+}
+.hero-quote {
+  width: 100%;
+}
+.quotes {
+  width: 100%;
+  p {
+    width: 100%;
+  }
+}
+/*index.html end*/
   /* about.html */
   .about-city{
     display: flex;
@@ -1136,7 +1177,29 @@ text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
+/*index.html*/
+#hero-forside {
+  h1 {
+    font-size: 40px;
+  }
+}
+.hero-content {
+  padding-top: 40px; 
+  .hero-desc-mobile {
+    p {
+          font-size: 20px;
+    }
+  }
+  .hero-quote {
+    .quotes {
+      p {
+        font-size: 25px;
+      }
+    }
+  }
+}
 
+/*index.html end*/
   /* about.html */
   .city-text{
     padding: 10px 10px  ;
