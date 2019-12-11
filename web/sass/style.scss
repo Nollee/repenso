@@ -370,7 +370,7 @@ textarea {
 }
 .hero-desc-mobile {
   display: none;
-} 
+}
 .hero-content{
   width: 90%;
   height: 80vh;
@@ -1604,20 +1604,17 @@ text-align: center;
 }
 .hero-content {
   padding-top: 40px;
-
+  }
+  .hero-quote {
+    .quotes {
+        font-size: 25px;
+    }
+  }
   .hero-desc-mobile {
     p {
           font-size: 20px;
     }
   }
-  .hero-quote {
-    .quotes {
-      p {
-        font-size: 25px;
-      }
-    }
-  }
-}
 .index-service-content {
   text-align: center;
   h2 {
@@ -1739,8 +1736,27 @@ flex-direction: column;
 /*service.html end*/
 }
 
-
-
-/* Mobile Navigation End */
-
-/* about.html */
+@media only screen and (max-width: 400px) {
+  /*index.html*/
+  #hero-forside {
+    h1 {
+      font-size: 30px;
+    }
+    }
+  .hero-desc-mobile {
+    p {
+      font-size: 18px;
+    }
+  }
+  .hero-quote {
+  .quotes {
+    p {
+      font-size: 20px;
+    }
+     .quote-place {
+       font-size: 15px;
+     }
+  }
+  } 
+  /*index.html end*/
+}
