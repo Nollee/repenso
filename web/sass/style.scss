@@ -19,6 +19,13 @@ $gradient-bottom: linear-gradient(to bottom, #ff6821 0%, #f18c27 100%);
   color: $main-blue;
   font-weight: 700;
 }
+
+@mixin h1-blue {
+  font-size: 60px;
+  color: $main-blue;
+  font-weight: 700;
+}
+
 %h1-white {
   font-size: 60px;
   color: white;
@@ -238,7 +245,7 @@ li {
     .casephoto{
       filter: opacity(0);
       width: 800px;
-      margin-left: -150px;
+      margin: 0 0 0 -150px ;
       -webkit-animation-name: fade;
       -ms-animation-name: fade;
       -webkit-animation-duration: 1s;
@@ -539,8 +546,8 @@ textarea {
   .about-container{
         margin: auto;
     margin-top: 18vh;
-    width: 75%;
-    max-width: 1375px;
+    width: 70%;
+    max-width: 1175px;
   }
 
   #about-heading{
@@ -930,6 +937,7 @@ text-align: center;
     margin-left: 0px;
   }
 }
+
 }
 
 /* about.html end */
@@ -1210,6 +1218,9 @@ text-align: center;
       font-size: 20px;
     }
   }
+
+  /* cases end */
+
   /*service.html*/
   .service-card {
     width: 225px;
@@ -1252,6 +1263,18 @@ text-align: center;
     }
   }
   /*service.html end*/
+
+  /* casetinc og casery */
+  .showcase-heading, .othercase-heading{
+  h1, h2{
+    font-size: 40px;
+  }
+}
+  .showcase-content{
+    h2{
+      font-size: 35px;
+    }
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -1282,11 +1305,12 @@ text-align: center;
     height: 100%;
     background-color: $main-beige;
     transition: all 0.6s ease;
-    padding-top: 20px;
+    padding-top: 10px;
 
     a {
       color: $main-blue;
       padding: 15px 30px;
+      font-size: 18px;
     }
   }
 
@@ -1305,6 +1329,7 @@ text-align: center;
     }
     a{
       padding: 15px 20px;
+      font-size: 14px;
     }
   }
 
@@ -1593,6 +1618,50 @@ text-align: center;
     margin-bottom: 20px;
   }
   /*service.html end*/
+
+  /* casery og casetinc */
+  .showcase-heading, .othercase-heading{
+   h1, h2{
+     font-size: 35px;
+   }
+ }
+
+ .showcase-wrapper{
+  width: 85%;
+}
+
+.showcase-content{
+  h2{
+    font-size: 25px;
+  }
+}
+
+.content-img{
+  width: 50%;
+}
+
+.content-right{
+  margin-left: -30px;
+  width: 90%;
+}
+.content-left{
+  margin-left: 90px;
+  width: 90%;
+}
+
+.content-help{
+  width: 100%;
+}
+
+.content-icon{
+  img{
+  width: 60px;
+  height: 60px;
+}
+h3{
+  font-size: 12px;
+}
+}
 }
 
 @media only screen and (max-width: 600px) {
@@ -1714,6 +1783,87 @@ text-align: center;
 
 /* case end */
 
+
+/* casery og casetinc */
+.showcase-wrapper{
+  width: 95%;
+  margin-top: 100px;
+}
+.showcase-heading, .othercase-heading{
+  h1, h2{
+    font-size: 30px;
+    text-align: center;
+  }
+}
+.showcase-line-right{
+  display: none;
+}
+.showcase-line-left{
+  display: none;
+}
+
+.showcase-content{
+  padding-top: 100px;
+}
+.showcase-video{
+  width: 100%;
+}
+.content-left, .content-right{
+  margin: 0px;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+    margin-top: 30px;
+}
+
+
+.content-img{
+  width: 100%;
+}
+
+.content-text{
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.help-img{
+  display: none;
+}
+
+.content-help{
+  width: 95%;
+}
+
+.content-helptext{
+  width: 100%;
+  h2{
+    text-align: center;
+  }
+}
+
+.content-iconwrapper{
+  width: 100%;
+  justify-content: space-around;
+}
+
+.othercase-line-left, .othercase-line-right{
+  display: none;
+}
+
+.othercase-wrapper{
+  margin-top: 30px;
+}
+.othercase{
+  width: 100%;
+}
+.othercase-img{
+  display: none;
+}
+
+.othercase-text{
+  width: 90%;
+}
+
 /*service.html*/
 .service-about-container {
   width: 80%;
@@ -1734,6 +1884,39 @@ flex-direction: column;
 }
 }
 /*service.html end*/
+
+// Casesection start
+.casesection_m{
+  background-color: $main-beige;
+}
+
+.casecontent_m{
+  display: none;
+  text-align: center;
+  padding: 10%;
+  margin: auto;
+    .ownerphoto_m{
+      position: relative;
+    }
+    .photoframe {
+      display: grid;
+    }
+    .photo:first-of-type{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    }
+    .photo:last-of-type{
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+    }
+    img{
+      width: 100%;
+    }
+}
+
+
+// Casesection end
+
 }
 
 @media only screen and (max-width: 400px) {
