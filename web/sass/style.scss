@@ -54,8 +54,6 @@ background-size: 500%;
   font-size: 22px;
   padding: 8px 13px;
 }
-
-
 //Inheritances End//
 
 /*rules*/
@@ -76,6 +74,17 @@ body {
   overflow-x: hidden;
 }
 
+/* Scrollbar for browser */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: $main-beige;
+}
+::-webkit-scrollbar-thumb {
+  background: $gradient-bottom;
+}
+/*scrollbar for browser end*/
 /*rules end*/
 
 a {
@@ -748,7 +757,7 @@ visibility: hidden;
 }
 .service-main-content {
   h1 {
-    font-size: 40px;
+    font-size: 40px;  
   }
   @extend %center;
   flex-direction: column;
@@ -918,7 +927,7 @@ text-align: center;
   /*service.html*/
   .service-main-content {
     h1 {
-      margin-top: 100px; 
+      margin-top: 100px;
     }
   }
   .service-card-container {
@@ -1607,9 +1616,6 @@ text-align: center;
     height: auto;
   }
   .service-main-content {
-    h1 {
-      margin-top: 100px;
-    }
     p {
       width: 70%;
       margin: 20px;
