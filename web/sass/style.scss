@@ -377,7 +377,7 @@ textarea {
 }
 .hero-desc-mobile {
   display: none;
-} 
+}
 .hero-content{
   width: 90%;
   height: 80vh;
@@ -547,7 +547,7 @@ textarea {
         margin: auto;
     margin-top: 18vh;
     width: 70%;
-    max-width: 1375px;
+    max-width: 1175px;
   }
 
   #about-heading{
@@ -1218,6 +1218,9 @@ text-align: center;
       font-size: 20px;
     }
   }
+
+  /* cases end */
+
   /*service.html*/
   .service-card {
     width: 225px;
@@ -1260,6 +1263,18 @@ text-align: center;
     }
   }
   /*service.html end*/
+
+  /* casetinc og casery */
+  .showcase-heading, .othercase-heading{
+  h1, h2{
+    font-size: 40px;
+  }
+}
+  .showcase-content{
+    h2{
+      font-size: 35px;
+    }
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -1603,6 +1618,50 @@ text-align: center;
     margin-bottom: 20px;
   }
   /*service.html end*/
+
+  /* casery og casetinc */
+  .showcase-heading, .othercase-heading{
+   h1, h2{
+     font-size: 35px;
+   }
+ }
+
+ .showcase-wrapper{
+  width: 85%;
+}
+
+.showcase-content{
+  h2{
+    font-size: 25px;
+  }
+}
+
+.content-img{
+  width: 50%;
+}
+
+.content-right{
+  margin-left: -30px;
+  width: 90%;
+}
+.content-left{
+  margin-left: 90px;
+  width: 90%;
+}
+
+.content-help{
+  width: 100%;
+}
+
+.content-icon{
+  img{
+  width: 60px;
+  height: 60px;
+}
+h3{
+  font-size: 12px;
+}
+}
 }
 
 @media only screen and (max-width: 600px) {
@@ -1726,6 +1785,87 @@ text-align: center;
 }
 
 /* case end */
+
+
+/* casery og casetinc */
+.showcase-wrapper{
+  width: 95%;
+  margin-top: 100px;
+}
+.showcase-heading, .othercase-heading{
+  h1, h2{
+    font-size: 30px;
+    text-align: center;
+  }
+}
+.showcase-line-right{
+  display: none;
+}
+.showcase-line-left{
+  display: none;
+}
+
+.showcase-content{
+  padding-top: 100px;
+}
+.showcase-video{
+  width: 100%;
+}
+.content-left, .content-right{
+  margin: 0px;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+    margin-top: 30px;
+}
+
+
+.content-img{
+  width: 100%;
+}
+
+.content-text{
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.help-img{
+  display: none;
+}
+
+.content-help{
+  width: 95%;
+}
+
+.content-helptext{
+  width: 100%;
+  h2{
+    text-align: center;
+  }
+}
+
+.content-iconwrapper{
+  width: 100%;
+  justify-content: space-around;
+}
+
+.othercase-line-left, .othercase-line-right{
+  display: none;
+}
+
+.othercase-wrapper{
+  margin-top: 30px;
+}
+.othercase{
+  width: 100%;
+}
+.othercase-img{
+  display: none;
+}
+
+.othercase-text{
+  width: 90%;
+}
 
 /*service.html*/
 .service-about-container {
