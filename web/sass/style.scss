@@ -747,6 +747,9 @@ visibility: hidden;
   background-position: center;
 }
 .service-main-content {
+  h1 {
+    font-size: 40px;
+  }
   @extend %center;
   flex-direction: column;
   width: 100%;
@@ -758,7 +761,9 @@ visibility: hidden;
   @extend %center;
   justify-content: space-around;
   flex-wrap: wrap;
-
+}
+.service-card-mobile {
+  display: none;
 }
 .service-card {
   margin: 15px;
@@ -911,6 +916,11 @@ text-align: center;
   }
   /*index.html end*/
   /*service.html*/
+  .service-main-content {
+    h1 {
+      margin-top: 100px; 
+    }
+  }
   .service-card-container {
   width: 90%;
   }
@@ -1522,7 +1532,7 @@ text-align: center;
     width: 100%;
   }
 }
-#index-service {
+#index-service, #service-main {
   height: auto;
 }
 .index-service-content {
@@ -1593,8 +1603,41 @@ text-align: center;
   }
   /* cases end */
   /*service.html*/
+  #service-main {
+    height: auto;
+  }
+  .service-main-content {
+    h1 {
+      margin-top: 100px;
+    }
+    p {
+      width: 70%;
+      margin: 20px;
+    }
+  }
   .service-about-container {
     width: 40%;
+  }
+  .service-card-mobile {
+    h3 {
+      font-size: 40px;
+      margin-left: 20px;
+    }
+    margin: 15px;
+    width: 80%;
+    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $main-beige;
+    color: $main-blue;
+    .cta {
+      height: 50px;
+    }
+  }
+  .service-card {
+    display: none;
   }
   .pack-desc {
     height: auto;
@@ -1868,6 +1911,35 @@ h3{
 }
 
 /*service.html*/
+#service-main {
+  height: auto;
+}
+.service-main-content {
+  height: 100%;
+  margin-top: 90px;
+  h1 {
+    margin-top: 0px;
+  }
+  p {
+    width: 90%;
+    margin: 20px;
+  }
+}
+.service-about-container {
+  width: 80%;
+}
+.service-card-mobile {
+  width: 100%;
+  h3 {
+    font-size: 20px;
+  }
+  .cta {
+    font-size: 22px;
+    width: 100px;
+  }
+}
+
+
 .service-about-container {
   width: 80%;
 }
@@ -1945,4 +2017,12 @@ flex-direction: column;
   }
   }
   /*index.html end*/
+  /*service.html*/
+  .service-card-mobile {
+    h3 {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  /*service.html end*/
 }
