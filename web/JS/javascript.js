@@ -15,12 +15,12 @@ $("#index").scrollTop(0);
     $(".burger-frontpage div").css
 
     if($(this).scrollTop() > $nav.height()) {
-        $('#logo-frontpage').attr('src','images/RepensoLogoDark.svg');
+        $('#logo-frontpage').attr('src','images/repenso_dark.svg');
         $(".burger-frontpage div").css("background-color", "#001624");
 
     }
     else {
-        $('#logo-frontpage').attr('src',"images/RepensoLogoWhite.svg");
+        $('#logo-frontpage').attr('src',"images/repenso_white.svg");
         $(".burger-frontpage div").css("background-color", "white");
 
     }
