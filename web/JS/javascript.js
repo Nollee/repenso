@@ -81,5 +81,13 @@ $("#index").scrollTop(0);
 
 })();
 
+///////////////////////////////GOOGLE reCaptcha//////////////////////////////
+                        window.onload = function() {
+  var $recaptcha = document.querySelector('#g-recaptcha-response');
 
+  if($recaptcha) {
+      $recaptcha.setAttribute("required", "required");
+  }
+};
+/////////////////////////////////////////////////////////////////////////////
 });

@@ -327,50 +327,6 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 }
-.contact-form {
-  height: 65%;
-  width: 50%;
-  @extend %center;
-  flex-direction: column;
-  padding: 5px 5px;
-}
-#contact-form {
-  @extend %center;
-  flex-direction: column;
-  justify-content: center;
-  width: 80%;
-}
-.form-control {
-  width: 100%;
-  background-color: transparent;
-  border: 0;
-  border-bottom: 2px solid $main-blue;
-  color: $main-blue;
-}
-.form-area{
-  width: 100%;
-  background-color: transparent;
-  border: 2px solid $main-blue;
-    padding: 2px;
-}
-::placeholder {
-  color: gray;
-}
-textarea {
-  resize: none;
-}
-.submit {
-  background: $gradient-bottom;
-  font-size: 16px;
-  font-weight: 700;
-  width: 60%;
-  border: transparent;
-  margin-top: 20px;
-  height: 50px;
-  transition: 0.5s;
-  cursor: pointer;
-  color: white;
-}
 /*footer end*/
 
 /*index*/
@@ -452,20 +408,21 @@ textarea {
   height: 100vh;
   background-color: $main-blue;
 }
-.index-service-content {
+.index-service-content, .index-contact-content-1 {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
     width: 80%;
     p {
       font-size: 30px;
-      color: white;
     }
   h2 {
     margin-bottom: 50px;
-    color: white;
-    font-size: 70px;
+    font-size: 5vw;
   }
+}
+.index-service-content p, .index-service-content h2 {
+  color: white;
 }
 .index-service-icons {
   width: 100%;
@@ -480,13 +437,44 @@ textarea {
     padding: 30px;
   }
 }
-.index-service-cta {
+.index-service-cta, .index-contact-cta {
   margin-top: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
   .cta {
     margin-left: 20px;
+  }
+}
+#index-contact, #contact-section {
+  @extend %center;
+  width: 100%;
+  height: 100vh;
+  background-color: $main-beige;
+}
+
+.index-contact-content-wrapper {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.index-contact-content-1 {
+  width: 65%;
+  color: $main-blue;
+}
+.index-contact-phone {
+  display: flex;
+  align-items: center;
+  img {
+    height: 120px;
+    margin-right: 20px;
+  }
+  a {
+    font-size: 5vw;
+    color: $main-blue;
   }
 }
 /*index end*/
@@ -757,7 +745,7 @@ visibility: hidden;
 }
 .service-main-content {
   h1 {
-    font-size: 40px;  
+    font-size: 40px;
   }
   @extend %center;
   flex-direction: column;
@@ -913,6 +901,63 @@ text-align: center;
   margin-bottom: 50px;
 }
 /*service end*/
+/*contact.html*/
+.contact-form {
+  margin: 0px;
+  margin-top: 50px;
+  width: 350px;
+  text-align: center;
+  p {
+    text-align: left;
+    padding-left: 10px;
+    font-weight: 600;
+  }
+
+  input {
+    display: block;
+    width: 90%;
+    margin: 0px auto;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: solid 3px $main-blue;
+  }
+  textarea {
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+    height: 80px;
+    border: solid 3px $main-blue;
+    resize: none;
+    background-color: transparent;
+  }
+}
+/*/Rmoves arrows in input type number in form/*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+/*/Rmoves arrows in input type number in form end/*/
+input[type=submit] {
+  cursor: pointer;
+  width: 150px !important;
+  @extend %cta;
+  border: 0px;
+  font-size: 20px;
+  font-weight: 600; 
+}
+.g-recaptcha {
+  margin: 10px 20px;
+}
+/*contact.html end*/
+
 @media only screen and (max-width: 1300px) {
   /*index.html*/
   #hero-forside {
@@ -922,6 +967,23 @@ text-align: center;
   }
   .hero-content {
     justify-content: space-between;
+  }
+  .index-contact-phone {
+    img {
+      height: 60px !important;
+      margin-right: 10px
+    }
+  }
+  #index-contact {
+    height: auto;
+  }
+  .index-contact-content-wrapper {
+    width: 95%;
+  }
+  .index-contact-content-1 {
+    display: flex;
+    align-items: left;
+    width: 50%;
   }
   /*index.html end*/
   /*service.html*/
@@ -1211,12 +1273,26 @@ text-align: center;
   .hero-desc {
     display: none;
   }
-  .index-service-content {
+  .index-service-content, .index-contact-content-1 {
+    margin-top: 50px;
     h2 {
       font-size: 55px;
+      text-align: center;
     }
     p {
       font-size: 20px;
+    }
+  }
+  .index-contact-content-1 {
+    width: 100% !important;
+    align-items: left;
+    justify-content: center;
+    align-items: center;
+  }
+  .index-contact-cta {
+    flex-direction: column;
+    .cta {
+        margin: 0px;
     }
   }
   /*index.html end*/
@@ -1541,10 +1617,10 @@ text-align: center;
     width: 100%;
   }
 }
-#index-service, #service-main {
+#index-service, #service-main, #index-contact {
   height: auto;
 }
-.index-service-content {
+.index-service-content, .index-contact-content-1{
   h2 {
     margin-top: 30px;
   }
@@ -1554,10 +1630,11 @@ text-align: center;
     width: 20%;
   }
 }
-.index-service-cta {
+.index-service-cta, .index-contact-cta {
   margin-top: 10px;
   margin-bottom: 10px;
   .cta {
+    margin: 15px;
     width: 80;
     height: 20px;
     font-size: 20px;
@@ -1736,7 +1813,7 @@ h3{
           font-size: 20px;
     }
   }
-.index-service-content {
+.index-service-content, .index-contact-content-1 {
   text-align: center;
   h2 {
     font-size: 35px;
@@ -1751,11 +1828,21 @@ h3{
       width: 30%;
   }
 }
-.index-service-cta{
+.index-service-cta, .index-contact-cta{
   flex-direction: column;
   .cta {
     margin: 15px;
   }
+}
+.index-contact-phone {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  a {
+    font-size: 30px;
+  }
+}
+input[type=submit] {
+  margin-bottom: 30px;
 }
 /*index.html end*/
   /* about.html */
@@ -2021,6 +2108,18 @@ flex-direction: column;
        font-size: 15px;
      }
   }
+  }
+  .contact-form {
+    width: 300px;
+  }
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .g-recaptcha {
+    margin: auto;
+    margin-bottom: 10px;
   }
   /*index.html end*/
   /*service.html*/
