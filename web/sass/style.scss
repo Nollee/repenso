@@ -143,6 +143,10 @@ li {
   }
 }
 
+#logo-frontpage.scrolled{
+  height: 40px;
+}
+
 .mobileNav {
   display: none;
 }
@@ -176,10 +180,11 @@ li {
   height: 50px;
 }
 
+
 /* Nav animation*/
 
 
-.navlink ul li a::after, .departments a::after {
+.navlink ul li a::after, .departments a::after, .footer-list a::after {
   content: '';
   display: block;
   width: 0;
@@ -188,10 +193,15 @@ li {
   transition: width 0.3s;
 }
 
-.navlink ul li a:hover::after, .departments a:hover::after {
+.navlink ul li a:hover::after, .departments a:hover::after, .footer-list a:hover::after {
   width: 100%;
   transition: width 0.3s;
 }
+
+.list-icon a:hover::after, #adresse:hover::after{
+  width: 0%;
+}
+
 #contact{
   background:
   linear-gradient($main-beige,$main-beige) padding-box right,
@@ -334,9 +344,6 @@ footer {
   background-color: $main-beige;
   margin-bottom: 0;
   display: flex;
-  border-image: $gradient-right;
-  border-image-slice: 1;
-  border-top: 3px solid transparent;
 }
 
 .footer-frontpage, .footer-casespage{
@@ -357,23 +364,35 @@ footer {
   margin-left: 2.5%;
 }
 
+.footer-left {
+  width: 45%;
+  height: 100%;
+}
+
+.footer-right{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 2.5%;
+}
+
 .footer-list{
   display: flex;
   flex-direction: column;
-  width: 20%;
   h3{
     font-size: 20px;
     margin-bottom: 20px;
-    margin-top: 25px;
+    margin-top: 30px;
   }
   a, p{
     color: $main-blue;
-    font-size: 12px;
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 18px;
   }
   img{
     margin-right: 5px;
+    width: 20px;
   }
 }
 
@@ -1066,6 +1085,13 @@ margin-bottom: 50px;
   width: 80%;
 }
 
+.partners-img{
+  width: 14%;
+  img{
+    width: 100%;
+  }
+}
+
 input {
   display: block;
   width: 90%;
@@ -1141,13 +1167,10 @@ input[type=submit] {
   }
   /*index.html end*/
   /*service.html*/
-  }
   .service-card-container {
   width: 90%;
   }
-.pack-desc-img {
-    height: 350px;
-}
+
 .pack-desc {
   height: auto;
 }
@@ -1171,6 +1194,11 @@ input[type=submit] {
     margin-left: 0px;
   }
 }
+
+
+}
+
+
 
 
 /* about.html end */
@@ -1644,9 +1672,6 @@ input[type=submit] {
     background-color: white;
   }
 
-  .burger-frontpage.scrolled div{
-    background-color: $main-blue !important;
-  }
 
 
 
