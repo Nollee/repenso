@@ -124,7 +124,6 @@ li {
   position: fixed;
   z-index: 20;
   top: 0;
-  margin-top: 25px;
   padding: 20px 0;
   a {
     color: white;
@@ -137,7 +136,6 @@ li {
   border-image-slice: 1;
   border-bottom: 3px solid transparent;
   transition: all 200ms linear;
-  margin-top: 0;
   a{
     color: $main-blue;
   }
@@ -173,9 +171,8 @@ li {
 
 #logo, #logo-frontpage {
   width: auto;
-  height: 50px;
+  height: 35px;
 }
-
 /* Nav animation*/
 
 
@@ -839,7 +836,6 @@ visibility: hidden;
   width: 100%;
   color: white;
   text-align: center;
-  margin-top: 5%;
 }
 .service-card-container {
   width: 70%;
@@ -1119,6 +1115,10 @@ input[type=submit] {
   }
   /*index.html end*/
   /*service.html*/
+  .service-main-content {
+    h1 {
+      margin-top: 100px;
+    }
   }
   .service-card-container {
   width: 90%;
