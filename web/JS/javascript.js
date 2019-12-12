@@ -12,7 +12,6 @@ $("#index").scrollTop(0);
    $(document).scroll(function () {
 	  var $nav = $(".frontpage-nav");
 	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-    $(".burger-frontpage div").css
 
     if($(this).scrollTop() > $nav.height()) {
         $('#logo-frontpage').attr('src','images/RepensoLogoDark.svg');
