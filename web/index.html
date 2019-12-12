@@ -174,6 +174,43 @@
     </div>
     </section>
 
+    <section id="index-contact">
+      <div class="index-contact-content-wrapper">
+      <div class="index-contact-content-1">
+        <h2>Har du spørgsmål?<br>Kontakt os</h2>
+        <div class="index-contact-phone">
+          <img src="images/telephone.svg" alt="icon of telephone" data-aos="fade-right" data-aos-delay="300">
+          <a data-aos="fade-right" data-aos-delay="100" href="tel:+4530935234">+45 30 93 52 34</a>
+        </div>
+        <div class="index-contact-cta">
+          <p>Se vores afdelinger</p><a class="cta" href="about.html">Afdelinger</a>
+        </div>
+    </div>
+    <div class="index-contact-content-2">
+        <!------------------------------------CONTACT FORM--------------------->
+        <div class="contact-form">
+            <form id="contact-form" method="post" action="contact-form-handler.php">
+              <p>Navn*</p>
+                <input name="name" type="text" class="form-control" placeholder="Hvad er dit navn?" required><br>
+                <p>Email*</p>
+                <input name="email" type="text" class="form-control" placeholder="Hvad er din email?" required><br>
+                <p>Telefon</p>
+                <input name="phone" type="number" class="form-control" placeholder="Hvad er dit telefonnummer?"><br>
+                <p>Besked*</p>
+                <textarea name="message" class="form-control" placeholder="Skriv din besked her" rows="4" required></textarea><br>
+                <!------------ Google recaptcha goes here---------->
+               <div class="g-recaptcha" data-sitekey="6LdnSMcUAAAAAIi8RzxGLxzUmgf2HVot8ATE3DfD"></div>
+                    <!------------ Google recaptcha goes here end---------->
+
+                <input type="submit" class="form-control cta" value="Send Besked">
+            </form>
+        </div>
+          <!------------------------------------CONTACT FORM END--------------------->
+    </div>
+    </div>
+    </section>
+
+
     <footer class="footer-frontpage">
       <div class="footer-left">
         <iframe
@@ -218,42 +255,7 @@
     </footer>
 
 
-    <section id="index-contact">
-      <div class="index-contact-content-wrapper">
-      <div class="index-contact-content-1">
-        <h2>Har du spørgsmål?<br>Kontakt os</h2>
-        <div class="index-contact-phone">
-          <img src="images/telephone.svg" alt="icon of telephone" data-aos="fade-right" data-aos-delay="300">
-          <a data-aos="fade-right" data-aos-delay="100" href="tel:+4530935234">+45 30 93 52 34</a>
-        </div>
-        <div class="index-contact-cta">
-          <p>Se vores afdelinger</p><a class="cta" href="about.html">Afdelinger</a>
-        </div>
-</div>
-<div class="index-contact-content-2">
-        <!------------------------------------CONTACT FORM--------------------->
-        <div class="contact-form">
-            <form id="contact-form" method="post" action="contact-form-handler.php">
-              <p>Navn*</p>
-                <input name="name" type="text" class="form-control" placeholder="Hvad er dit navn?" required><br>
-                <p>Email*</p>
-                <input name="email" type="text" class="form-control" placeholder="Hvad er din email?" required><br>
-                <p>Telefon</p>
-                <input name="phone" type="number" class="form-control" placeholder="Hvad er dit telefonnummer?"><br>
-                <p>Besked*</p>
-                <textarea name="message" class="form-control" placeholder="Skriv din besked her" rows="4" required></textarea><br>
-                <!------------ Google recaptcha goes here---------->
-               <div class="g-recaptcha" data-sitekey="6LdnSMcUAAAAAIi8RzxGLxzUmgf2HVot8ATE3DfD"></div>
-                    <!------------ Google recaptcha goes here end---------->
-
-                <input type="submit" class="form-control cta" value="Send Besked">
-            </form>
-        </div>
-          <!------------------------------------CONTACT FORM END--------------------->
-</div>
-</div>
-    </section>
-
+  
 
 
     <script src="js/jquery-3.4.1.min.js"></script>
