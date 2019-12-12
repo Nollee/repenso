@@ -1,4 +1,4 @@
- $(document).ready(function() {
+$(document).ready(function() {
 
 $("#index").scrollTop(0);
 
@@ -48,7 +48,6 @@ $("#index").scrollTop(0);
 (function() {
 
   var quotes = $('.casecontent');
-  console.log(quotes);
   var quoteIndex = -1;
 
   function showNextQuote() {
@@ -63,23 +62,6 @@ $("#index").scrollTop(0);
 
 })();
 
-(function() {
-
-  var quotes = $('.casecontent_m');
-  console.log(quotes);
-  var quoteIndex = -1;
-
-  function showNextQuote() {
-      quoteIndex++;
-      quotes.eq(quoteIndex % quotes.length)
-          .fadeIn(0)
-          .delay(10000)
-          .fadeOut(2000, showNextQuote);
-  }
-
-  showNextQuote();
-
-})();
 
 
 });
