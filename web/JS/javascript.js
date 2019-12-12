@@ -12,7 +12,6 @@ $("#index").scrollTop(0);
    $(document).scroll(function () {
 	  var $nav = $(".frontpage-nav");
 	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-    $(".burger-frontpage div").css
 
     if($(this).scrollTop() > $nav.height()) {
         $('#logo-frontpage').attr('src','images/repenso_dark.svg');
@@ -63,5 +62,13 @@ $("#index").scrollTop(0);
 })();
 
 
+///////////////////////////////GOOGLE reCaptcha//////////////////////////////
+                        window.onload = function() {
+  var $recaptcha = document.querySelector('#g-recaptcha-response');
 
+  if($recaptcha) {
+      $recaptcha.setAttribute("required", "required");
+  }
+};
+/////////////////////////////////////////////////////////////////////////////
 });
