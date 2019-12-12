@@ -47,12 +47,13 @@ background-size: 500%;
   color: white;
   background-image: linear-gradient(to right, #f5580f 0%, #f5ba25 51%, #f5580f 100%);
   background-size: 500%;
-    background-position: left;
+  background-position: left;
   margin: auto;
   width: 100px;
   margin-top: 20px;
   font-size: 22px;
   padding: 8px 13px;
+  display: block;
 }
 //Inheritances End//
 
@@ -121,7 +122,7 @@ li {
 .frontpage-nav{
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 20;
   top: 0;
   padding: 20px 0;
   a {
@@ -222,13 +223,13 @@ li {
   align-self: center;
   flex-direction: column;
   background-color: $main-beige;
-  padding: 50px;
+  padding: 0 0 100px 0;
     h2{
       filter: opacity(0);
       position: relative;
       @extend %h1-blue;
       z-index: 2;
-      font-size: 5vw;
+      font-size: 4vw;
       animation-name: fade;
       animation-duration: 1s;
       animation-fill-mode: forwards;
@@ -267,25 +268,28 @@ li {
       right: 5%;
     }
     .casecta{
+      width: 53vw;
       display: flex;
-      margin: 50px auto;
+      margin: 25px auto 0 auto;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-between;
     }
     .cta{
-      width: 80px;
-      font-size: 20px;
-      height: 15px;
+      width: 6vw;
+      font-size: 1.3vw;
+      height: 1.5vw;
     }
     .casectatext{
-      margin: 0 25px 0 0;
-      font-size: 25px;
+      font-size: 1.4vw;
+      position: relative;
+      right: 5px;
     }
     .casecontent{
-      width: 80vw;
+      width: 60vw;
       margin: auto;
       display: none;
     }
+
 
     @keyframes fade{
       from { filter: opacity(0); }
@@ -304,7 +308,7 @@ h3.casequote{
   position: relative;
   @extend %h1-blue;
   z-index: 2;
-  font-size: 2vw;
+  font-size: 1.5vw;
   animation-name: fade;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -312,19 +316,17 @@ h3.casequote{
   left: 43%;
 }
 
-h2, h3{
-  display: inline-block;
+h3.casectatext{
   color: $main-blue;
 }
+
 
 
 .photoframe{
   display: inline-block;
 }
 
-.casesection{
-  width: 80vw;
-}
+
 
 
 /* Footer */
@@ -335,6 +337,12 @@ footer {
   margin-bottom: 0;
   display: flex;
 }
+
+.footer-frontpage, .footer-casespage{
+  margin: 0;
+}
+
+
 
 .footer-left {
   width: 45%;
@@ -495,6 +503,34 @@ footer {
     margin-left: 20px;
   }
 }
+
+
+
+.indicator{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+  img{
+    height: 25px;
+    animation: slide1 1.5s ease infinite;
+    cursor: pointer;
+  }
+}
+
+.indicator img:hover{
+  animation-play-state: paused;
+}
+
+@keyframes slide1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 15px);
+  }
+}
 /*index end*/
 
 /* cases */
@@ -513,13 +549,13 @@ footer {
   }
 }
 .cases-intro{
-  margin-top: 100px;
+  margin: 150px 0 100px 0;
 
 }
 #case-wrapper{
   display: flex;
   flex-direction: row;
-  width: 65%;
+  width: 90%;
   max-width: 1400px;
   justify-content: space-between;
   margin: auto;
@@ -528,10 +564,8 @@ footer {
 .cases{
   text-align: center;
   color: white;
-  display: flex;
   flex-direction: column;
-
-  width: 20%;
+  width: 20vw;
   margin: auto;
   h2{
     padding-top: 20px;
@@ -540,8 +574,25 @@ footer {
 }
 
 .cases-img{
-  margin-left: 0px;
+  display: grid;
+  justify-content: center;
+  width: 100%;
 }
+
+.casegriditem{
+  width: 100%;
+}
+
+.casegriditem:first-of-type{
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.casegriditem:last-of-type{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
 
 .case-toppic{
     width: 90%;
@@ -648,7 +699,7 @@ footer {
     justify-content: space-between;
   }
 
-  .anchor, .anchor-service{
+  .anchor, .anchor-service, .anchor-case{
     display: block;
 position: relative;
 visibility: hidden;
@@ -656,6 +707,10 @@ visibility: hidden;
 
   .anchor{
     top: -20px;
+  }
+
+  .anchor-case{
+    top: -50px;
   }
 
   .anchor-service{
@@ -2102,13 +2157,67 @@ flex-direction: column;
 
 // Casesection start
 
-
-    .casesection{
-      background-color: $main-beige;
+.casesection{
+  display: block;
+  background-color: $main-beige;
+  padding: 50px 0;
+  @include h1-blue;
+    h2{
+      filter: opacity(0);
+      position: relative;
       @include h1-blue;
-      h3{
-        font-size: 5vw;
-      }
+      margin-bottom: 0;
+      z-index: 2;
+      left:0;
+      bottom: 0;
+      font-size: 10vw;
+    }
+    h3.casequote{
+      filter: opacity(0);
+      position: relative;
+      margin: 0;
+      z-index: 2;
+      left: 0;
+    }
+    .ownerphoto{
+      filter: opacity(0);
+      position: relative;
+      width: 60vw;
+      z-index: 2;
+      margin-bottom: 0;
+    }
+
+    .casephoto{
+      filter: opacity(0);
+      width: 60vw;
+      margin: 0;
+    }
+    .casecta{
+      display: flex;
+      padding-top: 25px;
+      margin: auto;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .cta{
+      width: 80px;
+      font-size: 20px;
+      height: 15px;
+    }
+    .casectatext{
+      margin: 0 25px 0 0;
+      font-size: 25px;
+    }
+    .casecontent{
+      margin: auto;
+    //  display: none;
+    }
+
+    @keyframes fade{
+      from { filter: opacity(0); }
+      to { filter: opacity(1); }
+    }
+
     }
 
     .casecontent{
@@ -2139,67 +2248,6 @@ flex-direction: column;
 
     .ownerphoto{
       z-index: 2;
-    }
-
-    .casesection{
-      display: block;
-      background-color: $main-beige;
-      padding: 0;
-        h2{
-          filter: opacity(0);
-          position: relative;
-          @include h1-blue;
-          margin-bottom: 0;
-          z-index: 2;
-          left:0;
-          bottom: 0;
-        }
-        h3.casequote{
-          filter: opacity(0);
-          position: relative;
-          margin: 0;
-          z-index: 2;
-          left: 0;
-        }
-        .ownerphoto{
-          filter: opacity(0);
-          position: relative;
-          width: 60vw;
-          z-index: 2;
-          margin-bottom: 0;
-        }
-
-        .casephoto{
-          filter: opacity(0);
-          width: 60vw;
-          margin: 0;
-        }
-        .casecta{
-          display: flex;
-          padding-top: 25px;
-          margin: 0;
-          align-items: center;
-          justify-content: space-around;
-        }
-        .cta{
-          width: 80px;
-          font-size: 20px;
-          height: 15px;
-        }
-        .casectatext{
-          margin: 0 25px 0 0;
-          font-size: 25px;
-        }
-        .casecontent{
-          margin: auto;
-        //  display: none;
-        }
-
-        @keyframes fade{
-          from { filter: opacity(0); }
-          to { filter: opacity(1); }
-        }
-
     }
 
     .photoframe {
