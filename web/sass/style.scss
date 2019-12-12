@@ -728,7 +728,7 @@ visibility: hidden;
   height: 2px;
   width: 100%;
   background: $gradient-right;
-  margin: 15px 0;
+  margin: 12px 0;
 }
 
 .worker-topline{
@@ -906,6 +906,9 @@ img{
   p {
     padding-top: 10px;
   }
+  h2{
+    color: white;
+  }
 }
 .pack-desc-icons {
   p {
@@ -935,6 +938,36 @@ img{
   margin-right: -50px;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.partners{
+  background-color: $main-blue;
+  width: 85%;
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin: 10px 0px 70px 0px;
+  }
+}
+
+.partners-img-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.partners-img{
+width: 15%;
+img{
+  width: 100%;
+}
 }
 /*service end*/
 @media only screen and (max-width: 1300px) {
