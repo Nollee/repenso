@@ -175,9 +175,14 @@ li {
   }
 }
 
-#logo, #logo-frontpage {
+#logo-frontpage {
   width: auto;
   height: 50px;
+}
+
+#logo{
+  width: auto;
+  height: 40px;
 }
 
 
@@ -2026,18 +2031,26 @@ footer{
 .footer-right{
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: auto;
+  width: 90%;
 }
 
 .footer-list{
   width: 90%;
   margin: auto;
   h3{
-    font-size: 25px;
+    font-size: 30px;
+    text-align: center;
   }
   a, p{
-    font-style: 20px;
+    font-size: 20px;
+    text-align: center;
   }
+}
+
+.list-icon{
+  margin: auto;
 }
 
 /* footer end */
@@ -2299,6 +2312,23 @@ flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+}
+
+.partners{
+  background-image: url(../images/heroforside-1016.jpg);
+  h2{
+    font-size: 45px;
+    margin-bottom: 50px;
+  }
+}
+
+.partners-img-wrapper{
+  flex-direction: column;
+}
+
+.partners-img{
+  width: 65%;
+  margin-bottom: 30px;
 }
 /*service.html end*/
 
