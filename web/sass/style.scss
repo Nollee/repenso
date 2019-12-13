@@ -143,6 +143,10 @@ li {
   }
 }
 
+#logo-frontpage.scrolled{
+  height: 40px;
+}
+
 .mobileNav {
   display: none;
 }
@@ -171,15 +175,21 @@ li {
   }
 }
 
-#logo, #logo-frontpage {
+#logo-frontpage {
   width: auto;
   height: 50px;
 }
 
+#logo{
+  width: auto;
+  height: 40px;
+}
+
+
 /* Nav animation*/
 
 
-.navlink ul li a::after, .departments a::after {
+.navlink ul li a::after, .departments a::after, .footer-list a::after {
   content: '';
   display: block;
   width: 0;
@@ -188,10 +198,15 @@ li {
   transition: width 0.3s;
 }
 
-.navlink ul li a:hover::after, .departments a:hover::after {
+.navlink ul li a:hover::after, .departments a:hover::after, .footer-list a:hover::after {
   width: 100%;
   transition: width 0.3s;
 }
+
+.list-icon a:hover::after, #adresse:hover::after{
+  width: 0%;
+}
+
 #contact{
   background:
   linear-gradient($main-beige,$main-beige) padding-box right,
@@ -331,13 +346,9 @@ h3.casectatext{
 /* Footer */
 footer {
   width: 100%;
-  margin-top: 180px;
   background-color: $main-beige;
   margin-bottom: 0;
   display: flex;
-  border-image: $gradient-right;
-  border-image-slice: 1;
-  border-top: 3px solid transparent;
 }
 
 .footer-frontpage, .footer-casespage{
@@ -358,23 +369,35 @@ footer {
   margin-left: 2.5%;
 }
 
+.footer-left {
+  width: 45%;
+  height: 100%;
+}
+
+.footer-right{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 2.5%;
+}
+
 .footer-list{
   display: flex;
   flex-direction: column;
-  width: 20%;
   h3{
     font-size: 20px;
     margin-bottom: 20px;
-    margin-top: 25px;
+    margin-top: 30px;
   }
   a, p{
     color: $main-blue;
-    font-size: 12px;
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 18px;
   }
   img{
     margin-right: 5px;
+    width: 20px;
   }
 }
 
@@ -592,7 +615,7 @@ footer {
   display: flex;
   flex-direction: row;
   width: 90%;
-  max-width: 1400px;
+  max-width: 1000px;
   justify-content: space-between;
   margin: auto;
 }
@@ -653,6 +676,7 @@ footer {
     margin-top: 18vh;
     width: 70%;
     max-width: 1175px;
+    margin-bottom: 150px;
   }
 
   #about-heading{
@@ -722,9 +746,6 @@ footer {
     font-size: 20px;
     color: #FF6C25;
     margin-right: 8px;
-    }
-    a:hover{
-      color: #FF5125;
     }
   }
   .about-city{
@@ -851,10 +872,19 @@ visibility: hidden;
   position: relative;
 }
 /*service*/
+
+.service-container{
+  width: 100%;
+  background-color: $main-beige;
+  max-width: 1800px;
+  margin: auto;
+}
 #service-main {
   @extend %center;
   width: 100%;
   height: 100vh;
+  max-height: 700px;
+  margin: auto;
   background-image: url(../images/service-background.jpg);
   background-size: cover;
   background-position: center;
@@ -862,6 +892,7 @@ visibility: hidden;
 .service-main-content {
   h1 {
     font-size: 40px;
+    margin-top: 30px;
   }
   @extend %center;
   flex-direction: column;
@@ -897,6 +928,7 @@ visibility: hidden;
   .cta {
     margin-top: 25px;
     margin-bottom: 15px;
+    text-align: center;
   }
 }
 .service-card-p {
@@ -930,7 +962,6 @@ visibility: hidden;
   justify-content: space-evenly;
   flex-wrap: wrap;
   flex-direction: row;
-  background-color: $main-beige;
   width: 100%;
 }
 .service-h2 {
@@ -956,7 +987,6 @@ margin-bottom: 50px;
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: $main-beige;
   @extend %center;
 }
 .pack-desc {
@@ -1010,6 +1040,7 @@ margin-bottom: 50px;
     @extend %readmore;
     margin: 0px;
     margin-left: 15px;
+    text-align: center;
   }
 }
 .pack-desc-img {
@@ -1030,33 +1061,69 @@ margin-bottom: 50px;
     padding-left: 10px;
     font-weight: 600;
   }
-
-  input {
-    display: block;
-    width: 90%;
-    margin: 0px auto;
-    padding: 10px;
-    border: none;
-    background-color: transparent;
-    border-bottom: solid 3px $main-blue;
-  }
-  textarea {
-    width: 90%;
-    margin: 5px auto;
-    padding: 10px;
-    height: 80px;
-    border: solid 3px $main-blue;
-    resize: none;
-    background-color: transparent;
+}
+.partners{
+  background-image: url(../images/heroforside-550px.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h2{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin: 20px 0px 20px 0px;
   }
 }
+
+.partners-img-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 40px;
+  width: 80%;
+}
+
+.partners-img{
+  width: 14%;
+  img{
+    width: 100%;
+  }
+}
+
+input {
+  display: block;
+  width: 90%;
+  margin: 0px auto;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  border-bottom: solid 3px $main-blue;
+}
+textarea {
+  width: 90%;
+  margin: 5px auto;
+  padding: 10px;
+  height: 80px;
+  border: solid 3px $main-blue;
+  resize: none;
+  background-color: transparent;
+}
+
 /*/Rmoves arrows in input type number in form/*/
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+-webkit-appearance: none;
+margin: 0;
 }
+
 
 /* Firefox */
 input[type=number] {
@@ -1105,13 +1172,10 @@ input[type=submit] {
   }
   /*index.html end*/
   /*service.html*/
-  }
   .service-card-container {
   width: 90%;
   }
-.pack-desc-img {
-    height: 350px;
-}
+
 .pack-desc {
   height: auto;
 }
@@ -1137,6 +1201,11 @@ input[type=submit] {
 }
 
 
+}
+
+
+
+
 /* about.html end */
 
 /* casetinc og casery */
@@ -1152,6 +1221,7 @@ input[type=submit] {
   width: 80%;
   max-width: 1300px;
   margin: auto;
+  margin-bottom: 150px;
 }
 
 .showcase-heading, .othercase-heading{
@@ -1501,6 +1571,7 @@ input[type=submit] {
       margin-left: 15px;
       height: 20px;
       width: 60px;
+      font-size: 16px;
     }
   }
   /*service.html end*/
@@ -1606,9 +1677,6 @@ input[type=submit] {
     background-color: white;
   }
 
-  .burger-frontpage.scrolled div{
-    background-color: $main-blue !important;
-  }
 
 
 
@@ -1963,18 +2031,26 @@ footer{
 .footer-right{
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: auto;
+  width: 90%;
 }
 
 .footer-list{
   width: 90%;
   margin: auto;
   h3{
-    font-size: 25px;
+    font-size: 30px;
+    text-align: center;
   }
   a, p{
-    font-style: 20px;
+    font-size: 20px;
+    text-align: center;
   }
+}
+
+.list-icon{
+  margin: auto;
 }
 
 /* footer end */
@@ -2237,6 +2313,23 @@ flex-direction: column;
   margin-bottom: 20px;
 }
 }
+
+.partners{
+  background-image: url(../images/heroforside-1016.jpg);
+  h2{
+    font-size: 45px;
+    margin-bottom: 50px;
+  }
+}
+
+.partners-img-wrapper{
+  flex-direction: column;
+}
+
+.partners-img{
+  width: 65%;
+  margin-bottom: 30px;
+}
 /*service.html end*/
 
 // Casesection start
@@ -2396,4 +2489,3 @@ flex-direction: column;
   }
   /*service.html end*/
 }
- 

@@ -12,10 +12,13 @@ $("#index").scrollTop(0);
    $(document).scroll(function () {
 	  var $nav = $(".frontpage-nav");
 	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    $("#logo-frontpage").toggleClass('scrolled', $(this).scrollTop() > $nav.height());
 
     if($(this).scrollTop() > $nav.height()) {
         $('#logo-frontpage').attr('src','images/repenso_dark.svg');
         $(".burger-frontpage div").css("background-color", "#001624");
+        $("#logo-frontpage img").css("width", "20px");
+
 
     }
     else {
