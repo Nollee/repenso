@@ -203,7 +203,7 @@ li {
   transition: width 0.3s;
 }
 
-.list-icon a:hover::after, #adresse:hover::after{
+.list-icon a:hover::after, #adresse:hover::after, #contact:hover::after{
   width: 0%;
 }
 
@@ -223,9 +223,7 @@ li {
 }
 #contact:hover{
   background-size: 0% 100%, auto;
-  a{
-    color: white;
-  }
+  color: white;
 }
 /* Nav animation end*/
 
@@ -1447,7 +1445,83 @@ input[type=submit] {
   margin-bottom: -8px;
 }
 
+/* casetinc og casery end */
 
+/* Contact.html */
+
+.contact-container{
+  width: 75%;
+  background-color: $main-beige;
+  margin: auto;
+}
+
+.contact-wrapper{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  margin-bottom: 100px;
+
+  h1{
+    font-size: 50px;
+  }
+  p{
+    font-weight: 600;
+    font-size: 18px;
+    margin: 15px 0;
+  }
+}
+
+.contact-right{
+  width: 30%;
+  .contact-form{
+    margin-top: 0px;
+  }
+}
+
+.contact-right div{
+  p{
+    margin: 3px 0;
+  }
+}
+
+.contact-left,{
+  width: 60%;
+}
+
+
+
+#contact-person{
+  width: 100%;
+}
+
+.contact-phone-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.phone-number{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  img{
+    width: 25px;
+    margin-right: 10px;
+  }
+  a{
+    color: $main-blue;
+  }
+}
+
+.contact-departments{
+  margin-top: 60px;
+  a{
+    color: #FF6C25;
+  }
+}
 
 @media only screen and (max-width: 1050px) {
   /*footer */
@@ -1587,6 +1661,47 @@ input[type=submit] {
       font-size: 35px;
     }
   }
+/* casetinc og casery end */
+
+/* contact.html */
+
+.contact-container{
+  width: 90%;
+}
+
+.contact-left{
+  width: 45%;
+  h1{
+    font-size: 40px;
+  }
+  p{
+    font-size: 14px;
+  }
+}
+
+.content-phone-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-phone{
+  h3{
+    font-size: 16px;
+  }
+  a{
+    font-size: 13px;
+  }
+  img{
+    width: 15px;
+  }
+}
+
+.contact-right{
+  width: 50%;
+  .contact-form{
+  width: 100%;
+}
+}
 }
 
 @media only screen and (max-width: 800px) {
@@ -1602,8 +1717,8 @@ input[type=submit] {
 
 
   #logo, #logo-frontpage  {
-    width: 140px;
-    height: auto;
+    width: auto;
+    height: 40px;
   }
 
   .sidebar {
@@ -1675,6 +1790,10 @@ input[type=submit] {
 
   .burger-frontpage div{
     background-color: white;
+  }
+
+  .frontpage-nav{
+    margin-top: 0px;
   }
 
 

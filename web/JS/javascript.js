@@ -56,7 +56,7 @@ $("#index").scrollTop(0);
       quoteIndex++;
       quotes.eq(quoteIndex % quotes.length)
           .fadeIn(0)
-          .delay(10000)
+          .delay(5000)
           .fadeOut(2000, showNextQuote);
   }
 
@@ -72,6 +72,6 @@ window.onload = function() {
       $recaptcha.setAttribute("required", "required");
   }
 };
-///////////////////////////////////////////////////////////////////////// 
+/////////////////////////////////////////////////////////////////////////
 
 });
