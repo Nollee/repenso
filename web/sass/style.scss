@@ -89,6 +89,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background: $gradient-bottom;
 }
+
 /*scrollbar for browser end*/
 /*rules end*/
 
@@ -140,6 +141,10 @@ li {
   border-image-slice: 1;
   border-bottom: 3px solid transparent;
   transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+
   margin-top: 0;
   a{
     color: $main-blue;
@@ -199,11 +204,17 @@ li {
   height: 3px;
   background: $gradient-right;
   transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  -webkit-transition: width 0.3s;
+  -o-transition: width 0.3s;
 }
 
 .navlink ul li a:hover::after, .departments a:hover::after, .footer-list a:hover::after {
   width: 100%;
   transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  -webkit-transition: width 0.3s;
+  -o-transition: width 0.3s;
 }
 
 .list-icon a:hover::after, #adresse:hover::after, #contact:hover::after{
@@ -222,6 +233,9 @@ li {
     font-size: 14px;
     padding: 7px 22px;
     transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
     display: block;
 }
 #contact:hover{
@@ -757,7 +771,7 @@ footer {
     justify-content: space-between;
   }
 
-  .anchor, .anchor-service, .anchor-case{
+  .anchor, .anchor-service, .anchor-case, .anchor-departments{
     display: block;
 position: relative;
 visibility: hidden;
@@ -775,9 +789,14 @@ visibility: hidden;
     top: -80px;
   }
 
+  .anchor-departments{
+    top: -150px;
+  }
+
   .city-pic{
     width: 45%;
     height: auto;
+    object-fit: cover;
   }
 
   .city-text{
@@ -842,7 +861,7 @@ visibility: hidden;
   height: 2px;
   width: 100%;
   background: $gradient-right;
-  margin: 15px 0;
+  margin: 12px 0;
 }
 
 .worker-topline{
@@ -858,7 +877,7 @@ visibility: hidden;
 .worker-contact{
   display: flex;
   align-items: center;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   img{
     margin-right: 5px;
     width: 18px;
@@ -1531,8 +1550,9 @@ input[type=submit] {
 
 
 @media only screen and (max-width: 1050px) {
-  /*footer */
 
+
+  /**************************** footer *****************************/
   .footer-left{
     width: 40%;
   }
@@ -1543,8 +1563,10 @@ input[type=submit] {
   .footer-list{
     width: 24%;
   }
+  /**************************** footer end *************************/
 
-  /*index.html*/
+
+  /**************************** index.html *************************/
   .hero-content {
     h1 {
       font-size: 50px;
@@ -1586,8 +1608,10 @@ input[type=submit] {
         margin: 0px;
     }
   }
-  /*index.html end*/
-  /* about.html */
+  /************************* index.html end **********************/
+
+
+  /************************* about.html **************************/
   .about-container{
     width: 85%;
   }
@@ -1600,10 +1624,10 @@ input[type=submit] {
   .worker{
     margin-right: 20px;
   }
+  /************************ about.html end **********************/
 
-  /* about.html end */
 
-  /* cases */
+  /************************ cases *******************************/
   .cases{
     width: 27%;
     h2{
@@ -1611,9 +1635,9 @@ input[type=submit] {
     }
   }
 
-  /* cases end */
+  /************************ cases.html end **********************/
 
-  /*service.html*/
+  /************************ service.html ************************/
   .service-card {
     width: 225px;
     height: auto;
@@ -1655,9 +1679,9 @@ input[type=submit] {
       font-size: 16px;
     }
   }
-  /*service.html end*/
+  /*************************** service.html end ***************************/
 
-  /* casetinc og casery */
+  /*********************** casetinc og casery ****************************/
   .showcase-heading, .othercase-heading{
   h1, h2{
     font-size: 40px;
@@ -1668,9 +1692,9 @@ input[type=submit] {
       font-size: 35px;
     }
   }
-/* casetinc og casery end */
+/*************************** casetinc og casery end *************************/
 
-/* contact.html */
+/********************************* contact.html ****************************/
 
 .contact-container{
   width: 90%;
@@ -1691,13 +1715,13 @@ input[type=submit] {
 .contact-phone{
   margin-top: 15px;
   h3{
-    font-size: 16px;
+    font-size: 22px;
   }
   a, p{
-    font-size: 13px;
+    font-size: 18px;
   }
   img{
-    width: 15px;
+    width: 30px;
   }
 }
 
@@ -1712,13 +1736,13 @@ input[type=submit] {
 }
 }
 
-/* contact.html end */
+/****************************** contact.html end *****************************/
 
 
 }
 
 @media only screen and (max-width: 800px) {
-    /* Mobile Navigation */
+    /************************** Mobile Navigation *************************/
   .navlink {
     display: none;
   }
@@ -1745,6 +1769,9 @@ input[type=submit] {
     height: 100%;
     background-color: $main-beige;
     transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
     padding-top: 10px;
 
     a {
@@ -1794,6 +1821,10 @@ input[type=submit] {
       height: 5px;
       margin: 5px 0;
       transition: 0.4s ease;
+      -webkit-transition: 0.4s ease;
+      -moz-transition: 0.4s ease;
+      -o-transition: 0.4s ease;
+
     }
   }
 
@@ -1891,7 +1922,7 @@ input[type=submit] {
 
 
 
-  @keyframes fadein {
+  @keyframes fadein { /* keyframe til animation af sidebar-elementerne */
     from {
       transform: translateX(30px);
       opacity: 0.5;
@@ -1905,7 +1936,6 @@ input[type=submit] {
 
 
 
-  /* https://www.jqueryscript.net/menu/Off-canvas-Burger-Menu-jQuery-CSS3.html */
   .overlay {
     position: fixed;
     top: 0;
@@ -1913,9 +1943,9 @@ input[type=submit] {
     z-index: 19;
     width: 100%;
     height: 100%;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out; /* Safari, Chrome and Opera > 12.1 */
+    -moz-transition: all 0.3s ease-in-out; /* Firefox < 16 */
+    -o-transition: all 0.3s ease-in-out; /* Opera < 1.21 */
     transition: all 0.3s ease-in-out;
     background-color: $main-blue;
     opacity: 0;
@@ -2183,7 +2213,6 @@ footer{
 .list-icon{
   margin: auto;
 }
-
 /* footer end */
 
 
@@ -2449,7 +2478,7 @@ flex-direction: column;
 }
 
 .partners{
-  background-color: $main-blue; 
+  background-color: $main-blue;
   h2{
     font-size: 45px;
     margin-bottom: 50px;
