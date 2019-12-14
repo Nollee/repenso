@@ -96,7 +96,10 @@ a {
   text-decoration: none;
   font-weight: 700;
   font-style: normal;
+}
 
+a:hover{
+  cursor: pointer;
 }
 
 
@@ -725,8 +728,8 @@ footer {
       color: $main-blue;
       font-size: 30px;
       font-weight: 700;
-      margin-top: 3vh;
-      margin-bottom: 2vh;
+      margin-top: 15px;
+      margin-bottom: 10px;
     }
     p{
       margin-top: 10px;
@@ -749,7 +752,7 @@ footer {
   .about-city{
     background-color: $main-beige;
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
   }
@@ -774,6 +777,7 @@ visibility: hidden;
 
   .city-pic{
     width: 45%;
+    height: auto;
   }
 
   .city-text{
@@ -804,7 +808,7 @@ visibility: hidden;
     }
     img{
       width: 30px;
-      margin-right: 3%;
+      margin-right: 15px;
     }
   }
 
@@ -854,9 +858,10 @@ visibility: hidden;
 .worker-contact{
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   img{
-    margin-right: 0.5vh;
+    margin-right: 5px;
+    width: 18px;
   }
 }
 
@@ -864,7 +869,7 @@ visibility: hidden;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 4vh;
+  margin-top: 60px;
   z-index: 10;
   margin-right: -420px;
   position: relative;
@@ -1048,18 +1053,7 @@ margin-bottom: 50px;
   margin-bottom: 50px;
 }
 /*service end*/
-/*contact.html*/
-.contact-form {
-  margin: 0px;
-  margin-top: 50px;
-  width: 350px;
-  text-align: center;
-  p {
-    text-align: left;
-    padding-left: 10px;
-    font-weight: 600;
-  }
-}
+
 .partners{
   background-color: $main-blue;
   background-position: center;
@@ -1092,6 +1086,19 @@ margin-bottom: 50px;
   width: 14%;
   img{
     width: 100%;
+  }
+}
+
+/*contact.html*/
+.contact-form {
+  margin: 0px;
+  margin-top: 50px;
+  width: 350px;
+  text-align: center;
+  p {
+    text-align: left;
+    padding-left: 10px;
+    font-weight: 600;
   }
 }
 
@@ -1139,75 +1146,87 @@ input[type=submit] {
 .g-recaptcha {
   margin: 10px 20px;
 }
-/*contact.html end*/
 
-@media only screen and (max-width: 1300px) {
-  /*index.html*/
-  #hero-forside {
-    h1 {
-      font-size: 70px;
-    }
-  }
-  .hero-content {
-    justify-content: space-between;
-  }
-  .index-contact-phone {
-    img {
-      height: 60px !important;
-      margin-right: 10px
-    }
-  }
-  #index-contact {
-    height: auto;
-  }
-  .index-contact-content-wrapper {
-    width: 95%;
-  }
-  .index-contact-content-1 {
-    display: flex;
-    align-items: left;
-    width: 50%;
-  }
-  /*index.html end*/
-  /*service.html*/
-  .service-card-container {
+.contact-container{
+  width: 75%;
+  background-color: $main-beige;
+  margin: auto;
+}
+
+.contact-wrapper{
   width: 90%;
-  }
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  margin-bottom: 100px;
 
-.pack-desc {
-  height: auto;
-}
-.pack-desc-content {
-  height: auto;
-  h2 {
-    font-size: 40px;
+  h1{
+    font-size: 50px;
   }
-  /*service.html end*/
+  p{
+    font-weight: 600;
+    font-size: 18px;
+    margin: 15px 0;
+  }
 }
-.pack-desc-icons {
-  padding-top: 20px;
+
+.contact-right{
+  width: 30%;
+  .contact-form{
+    margin-top: 30px;
+  }
 }
-.pack-desc-cta {
+
+.contact-right div{
+  p{
+    margin: 3px 0;
+  }
+}
+
+.contact-left,{
+  width: 60%;
+}
+
+
+
+#contact-person{
+  width: 100%;
+}
+
+.contact-phone-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.phone-number{
+  display: flex;
+  align-items: center;
   margin-top: 10px;
-  flex-direction: column;
-  align-items: flex-start;
-  .cta {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    margin-left: 0px;
+  img{
+    width: 25px;
+    margin-right: 10px;
+  }
+  a{
+    color: $main-blue;
   }
 }
 
-
+.contact-departments{
+  margin-top: 60px;
+  a{
+    color: #FF6C25;
+  }
+  a, p{
+    font-size: 25px;
+  }
 }
 
+/* contact.html end */
 
-
-
-/* about.html end */
-
-/* casetinc og casery */
-
+/* casery og casetinc */
 .showcase-wrapper{
   width: 70%;
   margin: auto;
@@ -1447,81 +1466,69 @@ input[type=submit] {
 
 /* casetinc og casery end */
 
-/* Contact.html */
 
-.contact-container{
-  width: 75%;
-  background-color: $main-beige;
-  margin: auto;
-}
-
-.contact-wrapper{
+@media only screen and (max-width: 1300px) {
+  /*index.html*/
+  #hero-forside {
+    h1 {
+      font-size: 70px;
+    }
+  }
+  .hero-content {
+    justify-content: space-between;
+  }
+  .index-contact-phone {
+    img {
+      height: 60px !important;
+      margin-right: 10px
+    }
+  }
+  #index-contact {
+    height: auto;
+  }
+  .index-contact-content-wrapper {
+    width: 95%;
+  }
+  .index-contact-content-1 {
+    display: flex;
+    align-items: left;
+    width: 50%;
+  }
+  /*index.html end*/
+  /*service.html*/
+  .service-card-container {
   width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  margin-bottom: 100px;
-
-  h1{
-    font-size: 50px;
   }
-  p{
-    font-weight: 600;
-    font-size: 18px;
-    margin: 15px 0;
+
+.pack-desc {
+  height: auto;
+}
+.pack-desc-content {
+  height: auto;
+  h2 {
+    font-size: 40px;
   }
+  /*service.html end*/
 }
-
-.contact-right{
-  width: 30%;
-  .contact-form{
-    margin-top: 0px;
-  }
+.pack-desc-icons {
+  padding-top: 20px;
 }
-
-.contact-right div{
-  p{
-    margin: 3px 0;
-  }
-}
-
-.contact-left,{
-  width: 60%;
-}
-
-
-
-#contact-person{
-  width: 100%;
-}
-
-.contact-phone-wrapper{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-
-.phone-number{
-  display: flex;
-  align-items: center;
+.pack-desc-cta {
   margin-top: 10px;
-  img{
-    width: 25px;
-    margin-right: 10px;
-  }
-  a{
-    color: $main-blue;
+  flex-direction: column;
+  align-items: flex-start;
+  .cta {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 0px;
   }
 }
 
-.contact-departments{
-  margin-top: 60px;
-  a{
-    color: #FF6C25;
-  }
+
 }
+
+
+
 
 @media only screen and (max-width: 1050px) {
   /*footer */
@@ -1588,7 +1595,7 @@ input[type=submit] {
     margin-right: -500px;
   }
   .city-pic{
-    width: 42%;
+    display: none;
   }
   .worker{
     margin-right: 20px;
@@ -1674,26 +1681,28 @@ input[type=submit] {
   h1{
     font-size: 40px;
   }
-  p{
-    font-size: 14px;
-  }
 }
 
-.content-phone-wrapper{
+.contact-phone-wrapper{
   display: flex;
   flex-direction: column;
 }
 
 .contact-phone{
+  margin-top: 15px;
   h3{
     font-size: 16px;
   }
-  a{
+  a, p{
     font-size: 13px;
   }
   img{
     width: 15px;
   }
+}
+
+.phone-number{
+  margin-top: 5px;
 }
 
 .contact-right{
@@ -1702,6 +1711,10 @@ input[type=submit] {
   width: 100%;
 }
 }
+
+/* contact.html end */
+
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -2009,9 +2022,6 @@ input[type=submit] {
     width: 90%;
   }
 
-  .city-pic{
-    display: none;
-  }
 
   #line-right{
     width: 50%;
@@ -2135,6 +2145,8 @@ h3{
   font-size: 12px;
 }
 }
+
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -2259,7 +2271,10 @@ input[type=submit] {
 
   .city-icon {
     a, p{
-    font-size: 11px;
+    font-size: 16px;
+  }
+  img{
+    width: 40px;
   }
   }
 
@@ -2562,6 +2577,16 @@ flex-direction: column;
       }
 // Casesection end
 
+
+/* Contact.html */
+
+.contact-wrapper{
+  flex-direction: column;
+}
+
+.contact-left, .contact-right{
+  width: 95%;
+}
 }
 
 @media only screen and (max-width: 400px) {
