@@ -1055,7 +1055,7 @@ margin-bottom: 50px;
 /*service end*/
 
 .partners{
-  background-image: url(../images/heroforside-550px.jpg);
+  background-color: $main-blue;
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -2449,7 +2449,7 @@ flex-direction: column;
 }
 
 .partners{
-  background-image: url(../images/heroforside-1016.jpg);
+  background-color: $main-blue; 
   h2{
     font-size: 45px;
     margin-bottom: 50px;
