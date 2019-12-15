@@ -982,10 +982,9 @@ visibility: hidden;
 #service-about {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 100%;
 }
 .service-h2 {
   h2 {
@@ -1000,10 +999,16 @@ visibility: hidden;
   padding-top: 20px;
 width: 30%;
 display: flex;
-justify-content: flex-start;
 flex-direction: column;
 text-align: center;
 margin-bottom: 50px;
+img{
+  height: 80px;
+  width: auto;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 }
 
 .pack-desc-section {
