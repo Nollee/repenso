@@ -1,8 +1,13 @@
 //Variabler//
+
 $main-blue: #001624;
+
 $main-beige: #FDFBED;
+
 $gradient-right: linear-gradient(to right, #ff6821 0%, #f18c27 100%);
 $gradient-bottom: linear-gradient(to bottom, #ff6821 0%, #f18c27 100%);
+
+
 //Variabler End//
 //Inheritances//
 %center {
@@ -2093,6 +2098,9 @@ input[type=submit] {
     p {
       width: 70%;
       margin: 20px;
+    }
+    h1{
+      margin-top: 50px;
     }
   }
   .service-about-container {
