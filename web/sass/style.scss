@@ -1,10 +1,10 @@
-//Variabler//
+////////////////////////////// Variabler ///////////////////////////////////////
 $main-blue: #001624;
 $main-beige: #FDFBED;
 $gradient-right: linear-gradient(to right, #ff6821 0%, #f18c27 100%);
 $gradient-bottom: linear-gradient(to bottom, #ff6821 0%, #f18c27 100%);
-//Variabler End//
-//Inheritances//
+/////////////////////////// Variabler End //////////////////////////////////////
+///////////////////////////// Inheritances //////////////////////////////////////
 %center {
   display: flex;
   align-items: center;
@@ -55,13 +55,8 @@ background-size: 500%;
   padding: 8px 13px;
   display: block;
 }
-//Inheritances End//
-
-/*rules*/
-
-
-
-
+/////////////////////////////////// Inheritances End ///////////////////////////
+////////////////////////////////// Basic styling ///////////////////////////////
 * {
   margin: 0;
   padding: 0;
@@ -91,7 +86,6 @@ body {
 }
 
 /*scrollbar for browser end*/
-/*rules end*/
 
 a {
   text-decoration: none;
@@ -107,7 +101,9 @@ a:hover{
 li {
   list-style: none;
 }
-/* Navigation */
+///////////////////////////////////// basic styling end ////////////////////////
+
+///////////////////////////////// Navigation ///////////////////////////////////
 .subpage-nav {
   background-color: $main-beige;
   width: 100%;
@@ -194,7 +190,7 @@ li {
 }
 
 
-/* Nav animation*/
+///////////// Nav animation //////////////
 
 
 .navlink ul li a::after, .departments a::after, .footer-list a::after {
@@ -242,10 +238,10 @@ li {
   background-size: 0% 100%, auto;
   color: white;
 }
-/* Nav animation end*/
+///////////// Nav animation end ////////////////
+//////////////////////////// navigation end ////////////////////////////////////
 
-//Case Section for frontpage START
-
+/////////////////////// case section index /////////////////////////////////////
 .casesection{
   display: flex;
   justify-content: center;
@@ -354,11 +350,11 @@ h3.casectatext{
 .photoframe{
   display: inline-block;
 }
+///////////////////////////////// case section index end ///////////////////////
 
 
 
-
-/* Footer */
+/////////////////////////////////////// Footer /////////////////////////////////
 footer {
   width: 100%;
   background-color: $main-beige;
@@ -426,9 +422,9 @@ footer {
 }
 
 
-/*footer end*/
+//////////////////////////// footer end ////////////////////////////////////////
 
-/*index*/
+///////////////////////////////// index ////////////////////////////////////////
 #hero-forside{
   @extend %center;
   width: 100%;
@@ -606,9 +602,9 @@ footer {
     transform: translate(0, 15px);
   }
 }
-/*index end*/
+/////////////////////////////// index end //////////////////////////////////////
 
-/* cases */
+/////////////////////////////// cases //////////////////////////////////////////
 
 .cases-text{
   width: 90%;
@@ -684,9 +680,9 @@ footer {
 }
 
 
-/* cases end */
+/////////////////////////////////// cases end //////////////////////////////////
 
-/* about.html */
+///////////////////////////////// about ////////////////////////////////////////
   .about-container{
         margin: auto;
     margin-top: 18vh;
@@ -717,7 +713,6 @@ footer {
   #line-right{
     width: 60%;
   }
-/* about.html end */
 
   #about-intro{
     margin-top: 5vh;
@@ -787,7 +782,7 @@ visibility: hidden;
   }
 
   .anchor-service{
-    top: -120px; 
+    top: -120px;
   }
 
   .anchor-departments{
@@ -894,7 +889,9 @@ visibility: hidden;
   margin-right: -420px;
   position: relative;
 }
-/*service*/
+/////////////////////////////// about end //////////////////////////////////////
+
+//////////////////////////////// service ///////////////////////////////////////
 
 .service-container{
   width: 100%;
@@ -1077,7 +1074,7 @@ img{
   margin-top: 50px;
   margin-bottom: 50px;
 }
-/*service end*/
+//////////////////////////// service end ///////////////////////////////////////
 
 .partners{
   background-color: $main-blue;
@@ -1114,7 +1111,7 @@ img{
   }
 }
 
-/*contact.html*/
+/////////////////////////////// contact ////////////////////////////////////////
 .contact-form {
   margin: 0px;
   margin-top: 50px;
@@ -1251,9 +1248,9 @@ input[type=submit] {
   }
 }
 
-/* contact.html end */
+////////////////////////////////// contact end /////////////////////////////////
 
-/* casery og casetinc */
+////////////////////////////// case ry & case tinc /////////////////////////////
 .showcase-wrapper{
   width: 70%;
   margin: auto;
@@ -1491,11 +1488,11 @@ input[type=submit] {
   margin-bottom: -8px;
 }
 
-/* casetinc og casery end */
+//////////////////////////////// case ry & case tinc end ///////////////////////
 
-
+////////////////////////////// max width 1300px ////////////////////////////////
 @media only screen and (max-width: 1300px) {
-  /*index.html*/
+  ///////////// index 1300px //////////////
   #hero-forside {
     h1 {
       font-size: 70px;
@@ -1521,8 +1518,8 @@ input[type=submit] {
     align-items: left;
     width: 50%;
   }
-  /*index.html end*/
-  /*service.html*/
+  ///////////// index 1300px end //////////////
+  ///////////// service 1300px //////////////
   .service-card-container {
   width: 90%;
   }
@@ -1535,7 +1532,7 @@ input[type=submit] {
   h2 {
     font-size: 40px;
   }
-  /*service.html end*/
+  ///////////// service 1300px end //////////////
 }
 .pack-desc-icons {
   padding-top: 20px;
@@ -1553,14 +1550,14 @@ input[type=submit] {
 
 
 }
+//////////////////////////////// max width 1300px end //////////////////////////
 
 
-
-
+//////////////////////////////////// max width 1050px //////////////////////////
 @media only screen and (max-width: 1050px) {
 
 
-  /**************************** footer *****************************/
+  ///////////// footer 1050px //////////////
   .footer-left{
     width: 40%;
   }
@@ -1571,10 +1568,10 @@ input[type=submit] {
   .footer-list{
     width: 24%;
   }
-  /**************************** footer end *************************/
+  ///////////// footer 1050px end //////////////
 
 
-  /**************************** index.html *************************/
+  ///////////// index 1050px //////////////
   .hero-content {
     h1 {
       font-size: 50px;
@@ -1616,10 +1613,10 @@ input[type=submit] {
         margin: 0px;
     }
   }
-  /************************* index.html end **********************/
+  ///////////// index 1050px end //////////////
 
 
-  /************************* about.html **************************/
+  ///////////// about 1050px //////////////
   .about-container{
     width: 85%;
   }
@@ -1632,10 +1629,10 @@ input[type=submit] {
   .worker{
     margin-right: 20px;
   }
-  /************************ about.html end **********************/
+  ///////////// about 1050px end //////////////
 
 
-  /************************ cases *******************************/
+  ///////////// cases 1050px //////////////
   .cases{
     width: 27%;
     h2{
@@ -1643,9 +1640,9 @@ input[type=submit] {
     }
   }
 
-  /************************ cases.html end **********************/
+  ///////////// cases 1050px end //////////////
 
-  /************************ service.html ************************/
+  ///////////// service 1050px //////////////
   .service-card {
     width: 225px;
     height: auto;
@@ -1687,9 +1684,9 @@ input[type=submit] {
       font-size: 16px;
     }
   }
-  /*************************** service.html end ***************************/
+  ///////////// service 1050px end //////////////
 
-  /*********************** casetinc og casery ****************************/
+  ///////////// case tinc & case ry 1050px //////////////
   .showcase-heading, .othercase-heading{
   h1, h2{
     font-size: 40px;
@@ -1700,9 +1697,9 @@ input[type=submit] {
       font-size: 35px;
     }
   }
-/*************************** casetinc og casery end *************************/
+///////////// case tinc & case ry 1050px end //////////////
 
-/********************************* contact.html ****************************/
+///////////// contact 1050px //////////////
 
 .contact-container{
   width: 90%;
@@ -1744,13 +1741,15 @@ input[type=submit] {
 }
 }
 
-/****************************** contact.html end *****************************/
+///////////// contact 1050px end //////////////
 
 
 }
+///////////////////////////////////// max width 1050px end /////////////////////
 
+/////////////////////////////////////// max width 800 px ///////////////////////
 @media only screen and (max-width: 800px) {
-    /************************** Mobile Navigation *************************/
+    /////////// Mobile Navigation 800px ////////
   .navlink {
     display: none;
   }
@@ -1965,9 +1964,9 @@ input[type=submit] {
     visibility: visible;
   }
 
-/* Mobile Navigation End */
+////////// mobil navigation 800px end //////////////
 
-/* footer */
+////////// footer 800px //////////////
 .footer-left{
   width: 30%;
 }
@@ -1981,8 +1980,8 @@ input[type=submit] {
     font-size: 10px;
   }
 }
-/* footer end */
-/*index.html*/
+////////// footer 800px end //////////////
+////////// index 800px //////////////
 .hero-content {
   justify-content: space-between;
   align-items: center;
@@ -2039,8 +2038,8 @@ input[type=submit] {
     font-size: 20px;
   }
 }
-/*index.html end*/
-  /* about.html */
+////////// index 800px end //////////////
+  ////////// about 800px //////////////
   .about-city{
     display: flex;
     flex-direction: column-reverse;
@@ -2065,9 +2064,9 @@ input[type=submit] {
     width: 50%;
   }
 
-  /* about.html end */
+  ////////// about 800px end //////////////
 
-  /* cases */
+  ////////// cases 800px //////////////
   .cases{
     width: 30%;
     h2{
@@ -2079,8 +2078,8 @@ input[type=submit] {
       font-size: 50px;
     }
   }
-  /* cases end */
-  /*service.html*/
+  ////////// cases 800px end //////////////
+  ////////// service 800px //////////////
   #service-main {
     height: auto;
   }
@@ -2138,9 +2137,9 @@ input[type=submit] {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  /*service.html end*/
+  ////////// service 800px end //////////////
 
-  /* casery og casetinc */
+  ////////// case ting & case ry 800px //////////////
   .showcase-heading, .othercase-heading{
    h1, h2{
      font-size: 35px;
@@ -2183,13 +2182,15 @@ h3{
   font-size: 12px;
 }
 }
-
+////////// case ry & case tinc 800px end //////////////
 
 }
+////////////////////////// max width 800 px end ////////////////////////////////
 
+////////////////////////// max width 600 px ////////////////////////////////////
 @media only screen and (max-width: 600px) {
 
-/* footer */
+////////// footer 600px //////////////
 footer{
   flex-direction: column;
 }
@@ -2221,10 +2222,10 @@ footer{
 .list-icon{
   margin: auto;
 }
-/* footer end */
+////////// footer 600px end //////////////
 
 
-/*index.html*/
+////////// index 600px //////////////
 #hero-forside {
   h1 {
     font-size: 40px;
@@ -2274,8 +2275,8 @@ footer{
 input[type=submit] {
   margin-bottom: 30px;
 }
-/*index.html end*/
-  /* about.html */
+////////// index 600px end //////////////
+  ////////// about 600px //////////////
 
   #repenso-overview{
     display: none;
@@ -2329,9 +2330,9 @@ input[type=submit] {
     }
 
   }
-/* about.html end */
+////////// about 600px end //////////////
 
-/* cases */
+////////// cases 600px //////////////
 #case-wrapper{
   display: flex;
   flex-direction: column;
@@ -2353,10 +2354,10 @@ input[type=submit] {
   }
 }
 
-/* case end */
+////////// cases 600px end //////////////
 
 
-/* casery og casetinc */
+////////// case ry & case tinc 600px //////////////
 .showcase-wrapper{
   width: 95%;
   margin-top: 100px;
@@ -2435,8 +2436,9 @@ input[type=submit] {
 .othercase-text{
   width: 90%;
 }
+////////// case ry & case tinc 600px end //////////////
 
-/*service.html*/
+////////// service 600px //////////////
 #service-main {
   height: auto;
 }
@@ -2501,9 +2503,9 @@ flex-direction: column;
   width: 65%;
   margin-bottom: 30px;
 }
-/*service.html end*/
+////////// service 600px end //////////////
 
-// Casesection start
+////////// case section 600px //////////////
 
 .casesection{
   display: block;
@@ -2612,10 +2614,10 @@ flex-direction: column;
       h3.casequote{
         font-size: 5vw;
       }
-// Casesection end
+////////// case section 600px end //////////////
 
 
-/* Contact.html */
+////////// contact 600px //////////////
 
 .contact-wrapper{
   flex-direction: column;
@@ -2624,10 +2626,13 @@ flex-direction: column;
 .contact-left, .contact-right{
   width: 95%;
 }
+////////// contact 600px end //////////////
 }
+//////////////////////// max width 600px end ///////////////////////////////////
 
+/////////////////////// max width 400px ////////////////////////////////////////
 @media only screen and (max-width: 400px) {
-  /*index.html*/
+  ////////// index 400px //////////////
   #hero-forside {
     h1 {
       font-size: 30px;
@@ -2660,13 +2665,14 @@ flex-direction: column;
     margin: auto;
     margin-bottom: 10px;
   }
-  /*index.html end*/
-  /*service.html*/
+  ////////// index 400px end //////////////
+  ////////// service 400px //////////////
   .service-card-mobile {
     h3 {
       margin-left: 10px;
       margin-right: 10px;
     }
   }
-  /*service.html end*/
+  ////////// service 400px end //////////////
 }
+//////////////////////////////////// max width 400px end ///////////////////////
