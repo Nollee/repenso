@@ -32,15 +32,17 @@ $("#index").scrollTop(0);
   (function() {
 
     var quotes = $(".quotes");
-    var quoteIndex = -1;
+    var quoteIndex = 0;
 
     function showNextQuote() {
-        quoteIndex++;
-        quotes.eq(quoteIndex % quotes.length)
+        quotes.eq(quoteIndex)
             .fadeIn(2000)
             .delay(2000)
             .fadeOut(2000, showNextQuote);
-
+            quoteIndex++;
+            if (quoteIndex == quotes.length) {
+              quoteIndex = 0;
+            }
     }
 
     showNextQuote();
@@ -49,18 +51,22 @@ $("#index").scrollTop(0);
 
 (function() {
 
-  var quotes = $('.casecontent');
-  var quoteIndex = -1;
+  var cases = $('.casecontent');
+  var caseIndex = 0;
 
-  function showNextQuote() {
-      quoteIndex++;
-      quotes.eq(quoteIndex % quotes.length)
+  function showNextCase() {
+      cases.eq(caseIndex)
           .fadeIn(0)
           .delay(5000)
-          .fadeOut(2000, showNextQuote);
+          .fadeOut(2000, showNextCase);
+          caseIndex++;
+
+          if (caseIndex == cases.length) {
+            caseIndex = 0;
+          }
   }
 
-  showNextQuote();
+  showNextCase();
 
 })();
 

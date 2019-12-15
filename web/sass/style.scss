@@ -89,6 +89,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background: $gradient-bottom;
 }
+
 /*scrollbar for browser end*/
 /*rules end*/
 
@@ -96,7 +97,10 @@ a {
   text-decoration: none;
   font-weight: 700;
   font-style: normal;
+}
 
+a:hover{
+  cursor: pointer;
 }
 
 
@@ -137,6 +141,10 @@ li {
   border-image-slice: 1;
   border-bottom: 3px solid transparent;
   transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+
   margin-top: 0;
   a{
     color: $main-blue;
@@ -196,11 +204,17 @@ li {
   height: 3px;
   background: $gradient-right;
   transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  -webkit-transition: width 0.3s;
+  -o-transition: width 0.3s;
 }
 
 .navlink ul li a:hover::after, .departments a:hover::after, .footer-list a:hover::after {
   width: 100%;
   transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  -webkit-transition: width 0.3s;
+  -o-transition: width 0.3s;
 }
 
 .list-icon a:hover::after, #adresse:hover::after, #contact:hover::after{
@@ -219,6 +233,9 @@ li {
     font-size: 14px;
     padding: 7px 22px;
     transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
     display: block;
 }
 #contact:hover{
@@ -347,6 +364,7 @@ footer {
   background-color: $main-beige;
   margin-bottom: 0;
   display: flex;
+  color: $main-blue;
 }
 
 .footer-frontpage, .footer-casespage{
@@ -725,8 +743,8 @@ footer {
       color: $main-blue;
       font-size: 30px;
       font-weight: 700;
-      margin-top: 3vh;
-      margin-bottom: 2vh;
+      margin-top: 15px;
+      margin-bottom: 10px;
     }
     p{
       margin-top: 10px;
@@ -749,12 +767,12 @@ footer {
   .about-city{
     background-color: $main-beige;
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
   }
 
-  .anchor, .anchor-service, .anchor-case{
+  .anchor, .anchor-service, .anchor-case, .anchor-departments{
     display: block;
 position: relative;
 visibility: hidden;
@@ -772,8 +790,14 @@ visibility: hidden;
     top: -120px; 
   }
 
+  .anchor-departments{
+    top: -150px;
+  }
+
   .city-pic{
     width: 45%;
+    height: auto;
+    object-fit: cover;
   }
 
   .city-text{
@@ -804,7 +828,7 @@ visibility: hidden;
     }
     img{
       width: 30px;
-      margin-right: 3%;
+      margin-right: 15px;
     }
   }
 
@@ -838,7 +862,7 @@ visibility: hidden;
   height: 2px;
   width: 100%;
   background: $gradient-right;
-  margin: 15px 0;
+  margin: 12px 0;
 }
 
 .worker-topline{
@@ -854,9 +878,10 @@ visibility: hidden;
 .worker-contact{
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   img{
-    margin-right: 0.5vh;
+    margin-right: 5px;
+    width: 18px;
   }
 }
 
@@ -864,7 +889,7 @@ visibility: hidden;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 4vh;
+  margin-top: 60px;
   z-index: 10;
   margin-right: -420px;
   position: relative;
@@ -957,10 +982,9 @@ visibility: hidden;
 #service-about {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 100%;
 }
 .service-h2 {
   h2 {
@@ -975,10 +999,16 @@ visibility: hidden;
   padding-top: 20px;
 width: 30%;
 display: flex;
-justify-content: flex-start;
 flex-direction: column;
 text-align: center;
 margin-bottom: 50px;
+img{
+  height: 80px;
+  width: auto;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 }
 
 .pack-desc-section {
@@ -1048,18 +1078,7 @@ margin-bottom: 50px;
   margin-bottom: 50px;
 }
 /*service end*/
-/*contact.html*/
-.contact-form {
-  margin: 0px;
-  margin-top: 50px;
-  width: 350px;
-  text-align: center;
-  p {
-    text-align: left;
-    padding-left: 10px;
-    font-weight: 600;
-  }
-}
+
 .partners{
   background-color: $main-blue;
   background-position: center;
@@ -1092,6 +1111,19 @@ margin-bottom: 50px;
   width: 14%;
   img{
     width: 100%;
+  }
+}
+
+/*contact.html*/
+.contact-form {
+  margin: 0px;
+  margin-top: 50px;
+  width: 350px;
+  text-align: center;
+  p {
+    text-align: left;
+    padding-left: 10px;
+    font-weight: 600;
   }
 }
 
@@ -1139,75 +1171,89 @@ input[type=submit] {
 .g-recaptcha {
   margin: 10px 20px;
 }
-/*contact.html end*/
 
-@media only screen and (max-width: 1300px) {
-  /*index.html*/
-  #hero-forside {
-    h1 {
-      font-size: 70px;
-    }
-  }
-  .hero-content {
-    justify-content: space-between;
-  }
-  .index-contact-phone {
-    img {
-      height: 60px !important;
-      margin-right: 10px
-    }
-  }
-  #index-contact {
-    height: auto;
-  }
-  .index-contact-content-wrapper {
-    width: 95%;
-  }
-  .index-contact-content-1 {
-    display: flex;
-    align-items: left;
-    width: 50%;
-  }
-  /*index.html end*/
-  /*service.html*/
-  .service-card-container {
+.contact-container{
+  width: 75%;
+  background-color: $main-beige;
+  margin: auto;
+  max-width: 1150px;
+  color: $main-blue;
+}
+
+.contact-wrapper{
   width: 90%;
-  }
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  margin-bottom: 100px;
 
-.pack-desc {
-  height: auto;
-}
-.pack-desc-content {
-  height: auto;
-  h2 {
-    font-size: 40px;
+  h1{
+    font-size: 50px;
   }
-  /*service.html end*/
+  p{
+    font-weight: 600;
+    font-size: 18px;
+    margin: 15px 0;
+  }
 }
-.pack-desc-icons {
-  padding-top: 20px;
+
+.contact-right{
+  width: 30%;
+  .contact-form{
+    margin-top: 30px;
+  }
 }
-.pack-desc-cta {
+
+.contact-right div{
+  p{
+    margin: 3px 0;
+  }
+}
+
+.contact-left,{
+  width: 60%;
+}
+
+
+
+#contact-person{
+  width: 100%;
+}
+
+.contact-phone-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.phone-number{
+  display: flex;
+  align-items: center;
   margin-top: 10px;
-  flex-direction: column;
-  align-items: flex-start;
-  .cta {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    margin-left: 0px;
+  img{
+    width: 25px;
+    margin-right: 10px;
+  }
+  a{
+    color: $main-blue;
   }
 }
 
-
+.contact-departments{
+  margin-top: 60px;
+  a{
+    color: #FF6C25;
+  }
+  a, p{
+    font-size: 25px;
+  }
 }
 
+/* contact.html end */
 
-
-
-/* about.html end */
-
-/* casetinc og casery */
-
+/* casery og casetinc */
 .showcase-wrapper{
   width: 70%;
   margin: auto;
@@ -1447,85 +1493,74 @@ input[type=submit] {
 
 /* casetinc og casery end */
 
-/* Contact.html */
 
-.contact-container{
-  width: 75%;
-  background-color: $main-beige;
-  margin: auto;
-}
-
-.contact-wrapper{
+@media only screen and (max-width: 1300px) {
+  /*index.html*/
+  #hero-forside {
+    h1 {
+      font-size: 70px;
+    }
+  }
+  .hero-content {
+    justify-content: space-between;
+  }
+  .index-contact-phone {
+    img {
+      height: 60px !important;
+      margin-right: 10px
+    }
+  }
+  #index-contact {
+    height: auto;
+  }
+  .index-contact-content-wrapper {
+    width: 95%;
+  }
+  .index-contact-content-1 {
+    display: flex;
+    align-items: left;
+    width: 50%;
+  }
+  /*index.html end*/
+  /*service.html*/
+  .service-card-container {
   width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  margin-bottom: 100px;
-
-  h1{
-    font-size: 50px;
   }
-  p{
-    font-weight: 600;
-    font-size: 18px;
-    margin: 15px 0;
+
+.pack-desc {
+  height: auto;
+}
+.pack-desc-content {
+  height: auto;
+  h2 {
+    font-size: 40px;
   }
+  /*service.html end*/
 }
-
-.contact-right{
-  width: 30%;
-  .contact-form{
-    margin-top: 0px;
-  }
+.pack-desc-icons {
+  padding-top: 20px;
 }
-
-.contact-right div{
-  p{
-    margin: 3px 0;
-  }
-}
-
-.contact-left,{
-  width: 60%;
-}
-
-
-
-#contact-person{
-  width: 100%;
-}
-
-.contact-phone-wrapper{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-
-.phone-number{
-  display: flex;
-  align-items: center;
+.pack-desc-cta {
   margin-top: 10px;
-  img{
-    width: 25px;
-    margin-right: 10px;
-  }
-  a{
-    color: $main-blue;
+  flex-direction: column;
+  align-items: flex-start;
+  .cta {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 0px;
   }
 }
 
-.contact-departments{
-  margin-top: 60px;
-  a{
-    color: #FF6C25;
-  }
+
 }
+
+
+
 
 @media only screen and (max-width: 1050px) {
-  /*footer */
 
+
+  /**************************** footer *****************************/
   .footer-left{
     width: 40%;
   }
@@ -1536,8 +1571,10 @@ input[type=submit] {
   .footer-list{
     width: 24%;
   }
+  /**************************** footer end *************************/
 
-  /*index.html*/
+
+  /**************************** index.html *************************/
   .hero-content {
     h1 {
       font-size: 50px;
@@ -1579,8 +1616,10 @@ input[type=submit] {
         margin: 0px;
     }
   }
-  /*index.html end*/
-  /* about.html */
+  /************************* index.html end **********************/
+
+
+  /************************* about.html **************************/
   .about-container{
     width: 85%;
   }
@@ -1588,15 +1627,15 @@ input[type=submit] {
     margin-right: -500px;
   }
   .city-pic{
-    width: 42%;
+    display: none;
   }
   .worker{
     margin-right: 20px;
   }
+  /************************ about.html end **********************/
 
-  /* about.html end */
 
-  /* cases */
+  /************************ cases *******************************/
   .cases{
     width: 27%;
     h2{
@@ -1604,9 +1643,9 @@ input[type=submit] {
     }
   }
 
-  /* cases end */
+  /************************ cases.html end **********************/
 
-  /*service.html*/
+  /************************ service.html ************************/
   .service-card {
     width: 225px;
     height: auto;
@@ -1648,9 +1687,9 @@ input[type=submit] {
       font-size: 16px;
     }
   }
-  /*service.html end*/
+  /*************************** service.html end ***************************/
 
-  /* casetinc og casery */
+  /*********************** casetinc og casery ****************************/
   .showcase-heading, .othercase-heading{
   h1, h2{
     font-size: 40px;
@@ -1661,9 +1700,9 @@ input[type=submit] {
       font-size: 35px;
     }
   }
-/* casetinc og casery end */
+/*************************** casetinc og casery end *************************/
 
-/* contact.html */
+/********************************* contact.html ****************************/
 
 .contact-container{
   width: 90%;
@@ -1674,26 +1713,28 @@ input[type=submit] {
   h1{
     font-size: 40px;
   }
-  p{
-    font-size: 14px;
-  }
 }
 
-.content-phone-wrapper{
+.contact-phone-wrapper{
   display: flex;
   flex-direction: column;
 }
 
 .contact-phone{
+  margin-top: 15px;
   h3{
-    font-size: 16px;
+    font-size: 22px;
   }
-  a{
-    font-size: 13px;
+  a, p{
+    font-size: 18px;
   }
   img{
-    width: 15px;
+    width: 30px;
   }
+}
+
+.phone-number{
+  margin-top: 5px;
 }
 
 .contact-right{
@@ -1702,10 +1743,14 @@ input[type=submit] {
   width: 100%;
 }
 }
+
+/****************************** contact.html end *****************************/
+
+
 }
 
 @media only screen and (max-width: 800px) {
-    /* Mobile Navigation */
+    /************************** Mobile Navigation *************************/
   .navlink {
     display: none;
   }
@@ -1732,6 +1777,9 @@ input[type=submit] {
     height: 100%;
     background-color: $main-beige;
     transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
     padding-top: 10px;
 
     a {
@@ -1781,6 +1829,10 @@ input[type=submit] {
       height: 5px;
       margin: 5px 0;
       transition: 0.4s ease;
+      -webkit-transition: 0.4s ease;
+      -moz-transition: 0.4s ease;
+      -o-transition: 0.4s ease;
+
     }
   }
 
@@ -1878,7 +1930,7 @@ input[type=submit] {
 
 
 
-  @keyframes fadein {
+  @keyframes fadein { /* keyframe til animation af sidebar-elementerne */
     from {
       transform: translateX(30px);
       opacity: 0.5;
@@ -1892,7 +1944,6 @@ input[type=submit] {
 
 
 
-  /* https://www.jqueryscript.net/menu/Off-canvas-Burger-Menu-jQuery-CSS3.html */
   .overlay {
     position: fixed;
     top: 0;
@@ -1900,9 +1951,9 @@ input[type=submit] {
     z-index: 19;
     width: 100%;
     height: 100%;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out; /* Safari, Chrome and Opera > 12.1 */
+    -moz-transition: all 0.3s ease-in-out; /* Firefox < 16 */
+    -o-transition: all 0.3s ease-in-out; /* Opera < 1.21 */
     transition: all 0.3s ease-in-out;
     background-color: $main-blue;
     opacity: 0;
@@ -2009,9 +2060,6 @@ input[type=submit] {
     width: 90%;
   }
 
-  .city-pic{
-    display: none;
-  }
 
   #line-right{
     width: 50%;
@@ -2135,6 +2183,8 @@ h3{
   font-size: 12px;
 }
 }
+
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -2171,7 +2221,6 @@ footer{
 .list-icon{
   margin: auto;
 }
-
 /* footer end */
 
 
@@ -2259,7 +2308,10 @@ input[type=submit] {
 
   .city-icon {
     a, p{
-    font-size: 11px;
+    font-size: 16px;
+  }
+  img{
+    width: 40px;
   }
   }
 
@@ -2562,6 +2614,16 @@ flex-direction: column;
       }
 // Casesection end
 
+
+/* Contact.html */
+
+.contact-wrapper{
+  flex-direction: column;
+}
+
+.contact-left, .contact-right{
+  width: 95%;
+}
 }
 
 @media only screen and (max-width: 400px) {
