@@ -57,8 +57,8 @@ $("#index").scrollTop(0);
   function showNextCase() {
       cases.eq(caseIndex)
           .fadeIn(0)
-          .delay(5000)
-          .fadeOut(2000, showNextCase);
+          .delay(3500)
+          .fadeOut(2500, showNextCase);
           caseIndex++;
 
           if (caseIndex == cases.length) {
@@ -75,7 +75,7 @@ window.onload = function() {
   var $recaptcha = document.querySelector('#g-recaptcha-response');
 
   if($recaptcha) {
-      $recaptcha.setAttribute("required", ""); 
+      $recaptcha.setAttribute("required", "");
   }
 };
 /////////////////////////////////////////////////////////////////////////
