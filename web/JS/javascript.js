@@ -58,8 +58,13 @@ $("#index").scrollTop(0);
       quoteIndex++;
       quotes.eq(quoteIndex % quotes.length)
           .fadeIn(0)
-          .delay(5000)
-          .fadeOut(2000, showNextQuote);
+          .delay(3500)
+          .fadeOut(2500, showNextCase);
+          caseIndex++;
+
+          if (caseIndex == cases.length) {
+            caseIndex = 0;
+          }
   }
 
   showNextQuote();
