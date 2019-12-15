@@ -2,12 +2,13 @@ $(document).ready(function() {
 
 $("#index").scrollTop(0);
 
-
+/////////////////////////// makes burgermenu clickable /////////////////////////
    $(".burger, .burger-frontpage, .overlay").click(function() {
      $('.mobileNav div, .overlay').toggleClass("slide");
    });
+/////////////////////////// makes burgermenu clickable end /////////////////////
 
-   //navbar scroll change color
+   ////////////////////// navbar scroll change color ///////////////////////////
    // https://stackoverflow.com/questions/23706003/changing-nav-bar-color-after-scrolling
    $(document).scroll(function () {
 	  var $nav = $(".frontpage-nav");
@@ -27,22 +28,21 @@ $("#index").scrollTop(0);
 
     }
 	});
-  //navbar scroll change color end
+  ////////////////////// navbar scroll change color end ////////////////////////
 
+  //////////////////// fade effect for quotes & case section on index //////////
   (function() {
 
     var quotes = $(".quotes");
-    var quoteIndex = 0;
+    var quoteIndex = -1;
 
     function showNextQuote() {
-        quotes.eq(quoteIndex)
+        quoteIndex++;
+        quotes.eq(quoteIndex % quotes.length)
             .fadeIn(2000)
             .delay(2000)
             .fadeOut(2000, showNextQuote);
-            quoteIndex++;
-            if (quoteIndex == quotes.length) {
-              quoteIndex = 0;
-            }
+
     }
 
     showNextQuote();
@@ -51,11 +51,12 @@ $("#index").scrollTop(0);
 
 (function() {
 
-  var cases = $('.casecontent');
-  var caseIndex = 0;
+  var quotes = $('.casecontent');
+  var quoteIndex = -1;
 
-  function showNextCase() {
-      cases.eq(caseIndex)
+  function showNextQuote() {
+      quoteIndex++;
+      quotes.eq(quoteIndex % quotes.length)
           .fadeIn(0)
           .delay(3500)
           .fadeOut(2500, showNextCase);
@@ -66,11 +67,12 @@ $("#index").scrollTop(0);
           }
   }
 
-  showNextCase();
+  showNextQuote();
 
 })();
+///////////////// fade effect for quotes & case section on index end ///////////
 
-/////////////////////makes reCaptcha required/////////////////////////////
+///////////////////// makes reCaptcha required /////////////////////////////////
 window.onload = function() {
   var $recaptcha = document.querySelector('#g-recaptcha-response');
 
@@ -78,6 +80,7 @@ window.onload = function() {
       $recaptcha.setAttribute("required", "");
   }
 };
-/////////////////////////////////////////////////////////////////////////
+///////////////////// makes reCaptcha required end /////////////////////////////
 
 });
+ 
