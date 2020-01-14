@@ -2161,6 +2161,7 @@ input[type=submit] {
    }
  }
 
+
  .showcase-wrapper{
   width: 85%;
 }
@@ -2388,6 +2389,13 @@ input[type=submit] {
 }
 .showcase-line-left{
   display: none;
+}
+
+.video-wrapper{
+  iframe{
+    width: 100%;
+    height: 421px;
+  }
 }
 
 .showcase-content{
