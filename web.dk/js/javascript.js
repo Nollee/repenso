@@ -7,17 +7,6 @@ $("#index").scrollTop(0);
      $('.mobileNav div, .overlay').toggleClass("slide");
    });
 
-
-$(".ready").click(function(){
-  if ($(document).location.reload(true)) {
-    alert("hej")
-  }
-  else{
-    alert("nej")
-  }
-
-
-})
    //navbar scroll change color
    // https://stackoverflow.com/questions/23706003/changing-nav-bar-color-after-scrolling
    $(document).scroll(function () {
