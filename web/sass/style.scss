@@ -909,7 +909,6 @@ visibility: hidden;
   @extend %center;
   width: 100%;
   height: 100vh;
-  max-height: 700px;
   max-width: 1600px;
   margin: auto;
   background-image: url(../images/service-background.jpg);
@@ -917,6 +916,9 @@ visibility: hidden;
   background-position: center;
 }
 .service-main-content {
+  p{
+    margin-bottom: 10px;
+  }
   h1 {
     font-size: 40px;
     margin-top: 30px;
@@ -942,20 +944,26 @@ visibility: hidden;
   @extend %center;
   flex-direction: column;
   width: 280px;
+  padding: 25px 10px;
   background-color: $main-beige;
   h3 {
-    color: white;
+    color: $main-blue;
     font-size: 40px;
     font-weight: 700;
     padding: 10px 0 10px;
     width: 100%;
     text-align: center;
-    background-image: $gradient-right;
+    border-bottom: 2px solid #f18c27;
+    //background-image: $gradient-right;
   }
   .cta {
-    margin-top: 25px;
+    margin-top: 40px;
     margin-bottom: 15px;
     text-align: center;
+    font-size: 15px;
+    width: 75px;
+    padding: 15px 25px;
+
   }
 }
 .service-card-p {
@@ -977,10 +985,13 @@ visibility: hidden;
   margin-top: 15px;
   img {
     height: 40px;
+    width: 40px;
     margin-right: 15px;
   }
   p {
     color: $main-blue;
+    font-weight: bold;
+    font-size: 15px;
   }
 }
 #service-about {
@@ -991,10 +1002,15 @@ visibility: hidden;
   flex-direction: row;
 }
 .service-h2 {
+  display: flex;
+  flex-direction: column;
+  p{
+    text-align: center;
+  }
   h2 {
     font-weight: 700;
     font-size: 30px;
-    margin: 30px;
+    margin: 30px 0 5px;
   }
   width: 100%;
   @extend %center;
