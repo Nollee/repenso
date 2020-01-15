@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../sass/style.scss"
+	],
+	"sourcesContent": [
+		"//Hello\r\n// sdhsjdhsudhsudh\r\n// hdfhjdhfjdhfjdhfjdhfjdhfjdhfj\r\n/*dfdf*/\r\nbody {\r\n  background-color: blue; \r\n}\r\n"
+	],
+	"names": [],
+	"mappings": "AAGA,QAAQ;;AACR,AAAA,IAAI,CAAC;EACH,gBAAgB,EAAE,IAAI,GACvB"
+}
