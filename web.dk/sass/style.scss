@@ -13,6 +13,7 @@ $gradient-bottom: linear-gradient(to bottom, #ff6821 0%, #f18c27 100%);
   justify-content: center;
   align-content: center;
 }
+
 %hide {
   display: none;
 }
@@ -103,8 +104,6 @@ a:hover{
 li {
   list-style: none;
 }
-
-
 ///////////////////////////////////// basic styling end ////////////////////////
 
 ///////////////////////////////// Navigation ///////////////////////////////////
@@ -412,7 +411,7 @@ footer {
   a, p{
     color: $main-blue;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 18px;
   }
   img{
@@ -744,18 +743,15 @@ footer {
     }
     h3{
       color: $main-blue;
-    font-size: 18px;
-    margin-top: 20px;
-    font-weight: 600;
-
-    }
-    h4{
-
+      font-size: 30px;
+      font-weight: 700;
+      margin-top: 15px;
+      margin-bottom: 10px;
     }
     p{
+      margin-top: 10px;
       color: $main-blue;
       font-weight: 200;
-      margin-top: 4px;
     }
   }
   .departments{
@@ -808,7 +804,7 @@ visibility: hidden;
 
   .city-text{
     width: 50%;
-    padding: 30px 30px;
+    padding: 20px 30px;
     h2{
       color: $main-blue;
       font-size: 40px;
@@ -895,7 +891,7 @@ visibility: hidden;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 60px;
   z-index: 10;
   margin-right: -420px;
   position: relative;
@@ -914,7 +910,6 @@ visibility: hidden;
   @extend %center;
   width: 100%;
   height: 100vh;
-  max-height: 700px;
   max-width: 1600px;
   margin: auto;
   background-image: url(../images/service-background.jpg);
@@ -922,6 +917,9 @@ visibility: hidden;
   background-position: center;
 }
 .service-main-content {
+  p{
+    margin-bottom: 10px;
+  }
   h1 {
     font-size: 40px;
     margin-top: 30px;
@@ -947,20 +945,26 @@ visibility: hidden;
   @extend %center;
   flex-direction: column;
   width: 280px;
+  padding: 25px 10px;
   background-color: $main-beige;
   h3 {
-    color: white;
+    color: $main-blue;
     font-size: 40px;
     font-weight: 700;
     padding: 10px 0 10px;
     width: 100%;
     text-align: center;
-    background-image: $gradient-right;
+    border-bottom: 2px solid #f18c27;
+    //background-image: $gradient-right;
   }
   .cta {
-    margin-top: 25px;
+    margin-top: 40px;
     margin-bottom: 15px;
     text-align: center;
+    font-size: 15px;
+    width: 75px;
+    padding: 15px 25px;
+
   }
 }
 .service-card-p {
@@ -982,10 +986,13 @@ visibility: hidden;
   margin-top: 15px;
   img {
     height: 40px;
+    width: 40px;
     margin-right: 15px;
   }
   p {
     color: $main-blue;
+    font-weight: bold;
+    font-size: 15px;
   }
 }
 #service-about {
@@ -996,10 +1003,15 @@ visibility: hidden;
   flex-direction: row;
 }
 .service-h2 {
+  display: flex;
+  flex-direction: column;
+  p{
+    text-align: center;
+  }
   h2 {
     font-weight: 700;
     font-size: 30px;
-    margin: 30px;
+    margin: 30px 0 5px;
   }
   width: 100%;
   @extend %center;
@@ -1300,10 +1312,6 @@ input[type=submit] {
 
 }
 
-#ry-festival-line{
-  width: 16%;
-}
-
 #ry-heading{
   font-size: 45px;
 }
@@ -1314,10 +1322,11 @@ input[type=submit] {
   display: flex;
   justify-content: center;
   margin-top: 35px;
-  iframe{
-    width: 70%;
-    height: 421px;
-  }
+}
+.showcase-video{
+  width: 70%;
+  height: auto;
+
 }
 
 .showcase-content{
@@ -2048,6 +2057,7 @@ input[type=submit] {
   margin-bottom: 10px;
   .cta {
     margin: 15px;
+    width: 80pxx;
     height: 20px;
     font-size: 20px;
   }
@@ -2413,16 +2423,12 @@ input[type=submit] {
   display: none;
 }
 
-.video-wrapper{
-  iframe{
-    width: 100%;
-    height: 421px;
-  }
-}
 .showcase-content{
   padding-top: 100px;
 }
-
+.showcase-video{
+  width: 100%;
+}
 .content-left, .content-right{
   margin: 0px;
   width: 100%;
