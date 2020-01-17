@@ -695,6 +695,8 @@ footer {
 #service-main {
   width: 100%;
   height: 100vh;
+  min-height: 800px;
+  max-height: 1080px;
   max-width: 1600px;
   margin: auto;
   background-image: url(../images/service-background.jpg);
@@ -702,13 +704,15 @@ footer {
   background-position: center; }
 
 .service-main-content {
+  padding-bottom: 50px;
   flex-direction: column;
   width: 100%;
   color: white;
   text-align: center;
   margin-top: 5%; }
   .service-main-content p {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    text-align: left; }
   .service-main-content h1 {
     font-size: 40px;
     margin-top: 30px; }
@@ -723,8 +727,9 @@ footer {
 
 .service-card {
   margin: 15px;
+  height: 375px;
   flex-direction: column;
-  width: 280px;
+  width: 25%;
   padding: 25px 10px;
   background-color: #FDFBED; }
   .service-card h3 {
@@ -774,7 +779,8 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  flex-direction: row; }
+  flex-direction: row;
+  margin: 0 10%; }
 
 .service-h2 {
   display: flex;
@@ -789,13 +795,13 @@ footer {
 
 .service-about-container {
   padding-top: 20px;
-  width: 30%;
+  width: 26%;
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-bottom: 50px; }
   .service-about-container img {
-    height: 80px;
+    height: 60px;
     width: auto;
     margin: auto;
     margin-top: 20px;
@@ -1290,8 +1296,8 @@ input[type=submit] {
       font-size: 20px; }
 
   .service-card {
-    width: 225px;
-    height: auto; }
+    width: 25%;
+    height: 350px; }
     .service-card h3 {
       font-size: 30px; }
 
