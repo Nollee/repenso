@@ -1609,6 +1609,17 @@ input[type=submit] {
       height: 20px;
       font-size: 20px; }
 
+  .casesection .casecontent {
+    width: 90vw; }
+  .casesection .casecta {
+    width: 70vw; }
+  .casesection .casectatext {
+    font-size: 14px; }
+  .casesection .cta {
+    font-size: 12px; }
+  .casesection .casequote {
+    font-size: 14px; }
+
   .about-city {
     display: flex;
     flex-direction: column-reverse; }
