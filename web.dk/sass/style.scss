@@ -452,6 +452,7 @@ footer {
   width: 90%;
   height: 80vh;
   position: relative;
+  max-width: 1375px;
   h1 {
     padding-top: 50px;
   }
@@ -514,7 +515,8 @@ footer {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-    width: 80%;
+  width: 80%;
+  max-width: 1375px;
     p {
       font-size: 30px;
     }
@@ -585,11 +587,11 @@ footer {
   display: flex;
   align-items: center;
   img {
-    height: 120px;
+    height: 90px;
     margin-right: 20px;
   }
   a {
-    font-size: 5vw;
+    font-size: 2.5vw;
     color: $main-blue;
   }
 }

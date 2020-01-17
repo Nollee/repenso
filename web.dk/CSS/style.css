@@ -339,6 +339,7 @@ footer {
   width: 90%;
   height: 80vh;
   position: relative;
+  max-width: 1375px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -389,7 +390,8 @@ footer {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  width: 80%; }
+  width: 80%;
+  max-width: 1375px; }
   .index-service-content p, .index-contact-content-1 p {
     font-size: 30px; }
   .index-service-content h2, .index-contact-content-1 h2 {
@@ -449,10 +451,10 @@ footer {
   display: flex;
   align-items: center; }
   .index-contact-phone img {
-    height: 120px;
+    height: 90px;
     margin-right: 20px; }
   .index-contact-phone a {
-    font-size: 5vw;
+    font-size: 2.5vw;
     color: #001624; }
 
 .indicator img:hover {
