@@ -1003,6 +1003,8 @@ visibility: hidden;
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: row;
+  margin: 0 10%;
+
 }
 .service-h2 {
   display: flex;
@@ -1518,6 +1520,36 @@ input[type=submit] {
 }
 
 //////////////////////////////// case ry & case tinc end ///////////////////////
+
+////////////////////////////////// success /////////////////////////////////////
+.success-content {
+  @extend %center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  font-size: 25px;
+  img {
+    width: 35%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  .readmore {
+    width: auto;
+  }
+  #countdown {
+    @extend %center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 15px;
+    padding-top: 20px;
+    background-image: url(../images/icons/countdown.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+///////////////////////////////// success end //////////////////////////////////
+
 
 ////////////////////////////// max width 1300px ////////////////////////////////
 @media only screen and (max-width: 1300px) {
