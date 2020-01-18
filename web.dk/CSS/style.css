@@ -311,7 +311,7 @@ footer {
   .footer-list a, .footer-list p {
     color: #001624;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 18px; }
   .footer-list img {
     margin-right: 5px;
@@ -339,6 +339,7 @@ footer {
   width: 90%;
   height: 80vh;
   position: relative;
+  max-width: 1375px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -389,7 +390,8 @@ footer {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  width: 80%; }
+  width: 80%;
+  max-width: 1375px; }
   .index-service-content p, .index-contact-content-1 p {
     font-size: 30px; }
   .index-service-content h2, .index-contact-content-1 h2 {
@@ -449,10 +451,10 @@ footer {
   display: flex;
   align-items: center; }
   .index-contact-phone img {
-    height: 120px;
+    height: 90px;
     margin-right: 20px; }
   .index-contact-phone a {
-    font-size: 5vw;
+    font-size: 2.5vw;
     color: #001624; }
 
 .indicator img:hover {
@@ -561,13 +563,14 @@ footer {
     margin-top: 30px; }
   .about-who h3 {
     color: #001624;
-    font-size: 18px;
-    margin-top: 20px;
-    font-weight: 600; }
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 10px; }
   .about-who p {
+    margin-top: 10px;
     color: #001624;
-    font-weight: 200;
-    margin-top: 4px; }
+    font-weight: 200; }
 
 .departments {
   width: 35%;
@@ -611,7 +614,7 @@ footer {
 
 .city-text {
   width: 50%;
-  padding: 30px 30px; }
+  padding: 20px 30px; }
   .city-text h2 {
     color: #001624;
     font-size: 40px;
@@ -680,7 +683,7 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 60px;
   z-index: 10;
   margin-right: -420px;
   position: relative; }
@@ -694,7 +697,8 @@ footer {
 #service-main {
   width: 100%;
   height: 100vh;
-  max-height: 700px;
+  min-height: 800px;
+  max-height: 1080px;
   max-width: 1600px;
   margin: auto;
   background-image: url(../images/service-background.jpg);
@@ -702,11 +706,15 @@ footer {
   background-position: center; }
 
 .service-main-content {
+  padding-bottom: 50px;
   flex-direction: column;
   width: 100%;
   color: white;
   text-align: center;
   margin-top: 5%; }
+  .service-main-content p {
+    margin-bottom: 10px;
+    text-align: left; }
   .service-main-content h1 {
     font-size: 40px;
     margin-top: 30px; }
@@ -721,21 +729,26 @@ footer {
 
 .service-card {
   margin: 15px;
+  height: 375px;
   flex-direction: column;
-  width: 280px;
+  width: 25%;
+  padding: 25px 10px;
   background-color: #FDFBED; }
   .service-card h3 {
-    color: white;
+    color: #001624;
     font-size: 40px;
     font-weight: 700;
     padding: 10px 0 10px;
     width: 100%;
     text-align: center;
-    background-image: linear-gradient(to right, #ff6821 0%, #f18c27 100%); }
+    border-bottom: 2px solid #f18c27; }
   .service-card .cta {
-    margin-top: 25px;
+    margin-top: 40px;
     margin-bottom: 15px;
-    text-align: center; }
+    text-align: center;
+    font-size: 15px;
+    width: 75px;
+    padding: 15px 25px; }
 
 .service-card-p {
   font-weight: 600;
@@ -756,33 +769,41 @@ footer {
   margin-top: 15px; }
   .service-card-icons img {
     height: 40px;
+    width: 40px;
     margin-right: 15px; }
   .service-card-icons p {
-    color: #001624; }
+    color: #001624;
+    font-weight: bold;
+    font-size: 15px; }
 
 #service-about {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  flex-direction: row; }
+  flex-direction: row;
+  margin: 0 10%; }
 
 .service-h2 {
+  display: flex;
+  flex-direction: column;
   width: 100%; }
+  .service-h2 p {
+    text-align: center; }
   .service-h2 h2 {
     font-weight: 700;
     font-size: 30px;
-    margin: 30px; }
+    margin: 30px 0 5px; }
 
 .service-about-container {
   padding-top: 20px;
-  width: 30%;
+  width: 26%;
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-bottom: 50px; }
   .service-about-container img {
-    height: 80px;
+    height: 60px;
     width: auto;
     margin: auto;
     margin-top: 20px;
@@ -1008,8 +1029,6 @@ input[type=submit] {
     width: 12%; }
   .showcase-heading .showcase-line-right, .othercase-heading .showcase-line-right {
     width: 32%; }
-  .showcase-heading #ry-festival-line, .othercase-heading #ry-festival-line {
-    width: 16%; }
   .showcase-heading #ry-heading, .othercase-heading #ry-heading {
     font-size: 45px; }
 
@@ -1020,7 +1039,8 @@ input[type=submit] {
   margin-top: 35px; }
   .video-wrapper iframe {
     width: 70%;
-    height: 421px; }
+    height: 441px;
+    position: relative; }
 
 .showcase-content {
   background-color: #FDFBED;
@@ -1299,8 +1319,8 @@ input[type=submit] {
       font-size: 20px; }
 
   .service-card {
-    width: 225px;
-    height: auto; }
+    width: 25%;
+    height: 350px; }
     .service-card h3 {
       font-size: 30px; }
 
@@ -1608,8 +1628,20 @@ input[type=submit] {
     margin-bottom: 10px; }
     .index-service-cta .cta, .index-contact-cta .cta {
       margin: 15px;
+      width: 80pxx;
       height: 20px;
       font-size: 20px; }
+
+  .casesection .casecontent {
+    width: 90vw; }
+  .casesection .casecta {
+    width: 70vw; }
+  .casesection .casectatext {
+    font-size: 14px; }
+  .casesection .cta {
+    font-size: 12px; }
+  .casesection .casequote {
+    font-size: 14px; }
 
   .about-city {
     display: flex;
@@ -1691,6 +1723,10 @@ input[type=submit] {
     justify-content: flex-start;
     margin-top: 20px;
     margin-bottom: 20px; }
+
+  iframe {
+    height: 300px;
+    width: 80%; }
 
   .showcase-heading h1, .showcase-heading h2, .othercase-heading h1, .othercase-heading h2 {
     font-size: 35px; }
@@ -1838,7 +1874,7 @@ input[type=submit] {
       margin: 0; }
 
   .showcase-wrapper {
-    width: 95%;
+    width: 100%;
     margin-top: 100px; }
 
   .showcase-heading h1, .showcase-heading h2, .othercase-heading h1, .othercase-heading h2 {
@@ -1853,10 +1889,13 @@ input[type=submit] {
 
   .video-wrapper iframe {
     width: 100%;
-    height: 421px; }
+    height: 250px; }
 
   .showcase-content {
     padding-top: 100px; }
+
+  .showcase-video {
+    width: 100%; }
 
   .content-left, .content-right {
     margin: 0px;

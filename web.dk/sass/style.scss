@@ -13,6 +13,7 @@ $gradient-bottom: linear-gradient(to bottom, #ff6821 0%, #f18c27 100%);
   justify-content: center;
   align-content: center;
 }
+
 %hide {
   display: none;
 }
@@ -103,8 +104,6 @@ a:hover{
 li {
   list-style: none;
 }
-
-
 ///////////////////////////////////// basic styling end ////////////////////////
 
 ///////////////////////////////// Navigation ///////////////////////////////////
@@ -412,7 +411,7 @@ footer {
   a, p{
     color: $main-blue;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 18px;
   }
   img{
@@ -453,6 +452,7 @@ footer {
   width: 90%;
   height: 80vh;
   position: relative;
+  max-width: 1375px;
   h1 {
     padding-top: 50px;
   }
@@ -515,7 +515,8 @@ footer {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-    width: 80%;
+  width: 80%;
+  max-width: 1375px;
     p {
       font-size: 30px;
     }
@@ -586,11 +587,11 @@ footer {
   display: flex;
   align-items: center;
   img {
-    height: 120px;
+    height: 90px;
     margin-right: 20px;
   }
   a {
-    font-size: 5vw;
+    font-size: 2.5vw;
     color: $main-blue;
   }
 }
@@ -744,18 +745,15 @@ footer {
     }
     h3{
       color: $main-blue;
-    font-size: 18px;
-    margin-top: 20px;
-    font-weight: 600;
-
-    }
-    h4{
-
+      font-size: 30px;
+      font-weight: 700;
+      margin-top: 15px;
+      margin-bottom: 10px;
     }
     p{
+      margin-top: 10px;
       color: $main-blue;
       font-weight: 200;
-      margin-top: 4px;
     }
   }
   .departments{
@@ -808,7 +806,7 @@ visibility: hidden;
 
   .city-text{
     width: 50%;
-    padding: 30px 30px;
+    padding: 20px 30px;
     h2{
       color: $main-blue;
       font-size: 40px;
@@ -895,7 +893,7 @@ visibility: hidden;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 60px;
   z-index: 10;
   margin-right: -420px;
   position: relative;
@@ -914,7 +912,8 @@ visibility: hidden;
   @extend %center;
   width: 100%;
   height: 100vh;
-  max-height: 700px;
+  min-height: 800px;
+  max-height: 1080px;
   max-width: 1600px;
   margin: auto;
   background-image: url(../images/service-background.jpg);
@@ -922,6 +921,11 @@ visibility: hidden;
   background-position: center;
 }
 .service-main-content {
+  padding-bottom: 50px;
+  p{
+    margin-bottom: 10px;
+    text-align: left;
+  }
   h1 {
     font-size: 40px;
     margin-top: 30px;
@@ -944,23 +948,30 @@ visibility: hidden;
 }
 .service-card {
   margin: 15px;
+  height: 375px;
   @extend %center;
   flex-direction: column;
-  width: 280px;
+  width: 25%;
+  padding: 25px 10px;
   background-color: $main-beige;
   h3 {
-    color: white;
+    color: $main-blue;
     font-size: 40px;
     font-weight: 700;
     padding: 10px 0 10px;
     width: 100%;
     text-align: center;
-    background-image: $gradient-right;
+    border-bottom: 2px solid #f18c27;
+    //background-image: $gradient-right;
   }
   .cta {
-    margin-top: 25px;
+    margin-top: 40px;
     margin-bottom: 15px;
     text-align: center;
+    font-size: 15px;
+    width: 75px;
+    padding: 15px 25px;
+
   }
 }
 .service-card-p {
@@ -982,10 +993,13 @@ visibility: hidden;
   margin-top: 15px;
   img {
     height: 40px;
+    width: 40px;
     margin-right: 15px;
   }
   p {
     color: $main-blue;
+    font-weight: bold;
+    font-size: 15px;
   }
 }
 #service-about {
@@ -994,25 +1008,31 @@ visibility: hidden;
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: row;
+  margin: 0 10%;
 }
 .service-h2 {
+  display: flex;
+  flex-direction: column;
+  p{
+    text-align: center;
+  }
   h2 {
     font-weight: 700;
     font-size: 30px;
-    margin: 30px;
+    margin: 30px 0 5px;
   }
   width: 100%;
   @extend %center;
 }
 .service-about-container {
   padding-top: 20px;
-width: 30%;
+width: 26%;
 display: flex;
 flex-direction: column;
 text-align: center;
 margin-bottom: 50px;
 img{
-  height: 80px;
+  height: 60px;
   width: auto;
   margin: auto;
   margin-top: 20px;
@@ -1300,10 +1320,6 @@ input[type=submit] {
 
 }
 
-#ry-festival-line{
-  width: 16%;
-}
-
 #ry-heading{
   font-size: 45px;
 }
@@ -1314,12 +1330,14 @@ input[type=submit] {
   display: flex;
   justify-content: center;
   margin-top: 35px;
-  iframe{
-    width: 70%;
-    height: 421px;
-  }
-}
 
+iframe{
+  width: 70%;
+  height: 441px;
+  position: relative;
+
+}
+}
 .showcase-content{
   background-color: $main-beige;
   margin: auto;
@@ -1688,8 +1706,8 @@ input[type=submit] {
 
   ///////////// service 1050px //////////////
   .service-card {
-    width: 225px;
-    height: auto;
+    width: 25%;
+    height: 350px;
     h3 {
       font-size: 30px;
     }
@@ -2077,9 +2095,31 @@ input[type=submit] {
   margin-bottom: 10px;
   .cta {
     margin: 15px;
+    width: 80pxx;
     height: 20px;
     font-size: 20px;
   }
+}
+.casesection{
+.casecontent{
+  width: 90vw;
+}
+
+.casecta{
+  width: 70vw;
+}
+
+.casectatext{
+  font-size: 14px;
+}
+
+.cta{
+  font-size: 12px;
+}
+
+.casequote{
+  font-size: 14px;
+}
 }
 ////////// index 800px end //////////////
   ////////// about 800px //////////////
@@ -2186,6 +2226,14 @@ input[type=submit] {
   ////////// service 800px end //////////////
 
   ////////// case ting & case ry 800px //////////////
+
+  .video-wrapper{
+  }
+  iframe{
+  height: 300px;
+  width: 80%;
+
+  }
   .showcase-heading, .othercase-heading{
    h1, h2{
      font-size: 35px;
@@ -2405,7 +2453,7 @@ input[type=submit] {
 
 ////////// case ry & case tinc 600px //////////////
 .showcase-wrapper{
-  width: 95%;
+  width: 100%;
   margin-top: 100px;
 }
 .showcase-heading, .othercase-heading{
@@ -2424,13 +2472,16 @@ input[type=submit] {
 .video-wrapper{
   iframe{
     width: 100%;
-    height: 421px;
+    height: 250px;
   }
 }
+
 .showcase-content{
   padding-top: 100px;
 }
-
+.showcase-video{
+  width: 100%;
+}
 .content-left, .content-right{
   margin: 0px;
   width: 100%;
