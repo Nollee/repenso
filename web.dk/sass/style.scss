@@ -1322,13 +1322,14 @@ input[type=submit] {
   display: flex;
   justify-content: center;
   margin-top: 35px;
-}
-.showcase-video{
+
+iframe{
   width: 70%;
-  height: auto;
+  height: 441px;
+  position: relative;
 
 }
-
+}
 .showcase-content{
   background-color: $main-beige;
   margin: auto;
@@ -2188,6 +2189,14 @@ input[type=submit] {
   ////////// service 800px end //////////////
 
   ////////// case ting & case ry 800px //////////////
+
+  .video-wrapper{
+  }
+  iframe{
+  height: 300px;
+  width: 80%;
+
+  }
   .showcase-heading, .othercase-heading{
    h1, h2{
      font-size: 35px;
@@ -2407,7 +2416,7 @@ input[type=submit] {
 
 ////////// case ry & case tinc 600px //////////////
 .showcase-wrapper{
-  width: 95%;
+  width: 100%;
   margin-top: 100px;
 }
 .showcase-heading, .othercase-heading{
@@ -2421,6 +2430,13 @@ input[type=submit] {
 }
 .showcase-line-left{
   display: none;
+}
+
+.video-wrapper{
+  iframe{
+    width: 100%;
+    height: 250px;
+  }
 }
 
 .showcase-content{
