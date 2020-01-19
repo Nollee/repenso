@@ -1,6 +1,7 @@
 $(document).ready(function() {
 //
 
+
 $("#index").scrollTop(0);
 //when site is refreshed, the site will scroll to top
 

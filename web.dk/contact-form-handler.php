@@ -23,7 +23,7 @@ $headers .= "Reply-To: $visitor_email \r\n";
 
 mail($to,$email_subject,$email_body,$headers);
 
-header("Location: index.html");
+header("Location: success.html");
 
 $secretKey = "6LdnSMcUAAAAAKnhtK3ZK6UYpmgfYFNvydnGINOy";
           $responseKey = $_POST['g-recaptcha-response'];

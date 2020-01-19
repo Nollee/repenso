@@ -194,6 +194,13 @@ li {
 
 ///////////// Nav animation //////////////
 
+#presentnav::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: $gradient-right;
+}
 
 .navlink ul li a::after, .departments a::after, .footer-list a::after {
   content: '';
@@ -240,6 +247,7 @@ li {
   background-size: 0% 100%, auto;
   color: white;
 }
+
 ///////////// Nav animation end ////////////////
 //////////////////////////// navigation end ////////////////////////////////////
 
@@ -633,7 +641,7 @@ footer {
   display: flex;
   flex-direction: row;
   width: 90%;
-  max-width: 1000px;
+  max-width: 1100px;
   justify-content: space-between;
   margin: auto;
 }
@@ -912,7 +920,6 @@ visibility: hidden;
   @extend %center;
   width: 100%;
   height: 100vh;
-  max-height: 700px;
   max-width: 1600px;
   margin: auto;
   background-image: url(../images/service-background.jpg);
@@ -920,6 +927,9 @@ visibility: hidden;
   background-position: center;
 }
 .service-main-content {
+  p{
+    margin-bottom: 10px;
+  }
   h1 {
     font-size: 40px;
     margin-top: 30px;
@@ -945,20 +955,26 @@ visibility: hidden;
   @extend %center;
   flex-direction: column;
   width: 280px;
+  padding: 25px 10px;
   background-color: $main-beige;
   h3 {
-    color: white;
+    color: $main-blue;
     font-size: 40px;
     font-weight: 700;
     padding: 10px 0 10px;
     width: 100%;
     text-align: center;
-    background-image: $gradient-right;
+    border-bottom: 2px solid #f18c27;
+    //background-image: $gradient-right;
   }
   .cta {
-    margin-top: 25px;
+    margin-top: 40px;
     margin-bottom: 15px;
     text-align: center;
+    font-size: 15px;
+    width: 75px;
+    padding: 15px 25px;
+
   }
 }
 .service-card-p {
@@ -980,10 +996,13 @@ visibility: hidden;
   margin-top: 15px;
   img {
     height: 40px;
+    width: 40px;
     margin-right: 15px;
   }
   p {
     color: $main-blue;
+    font-weight: bold;
+    font-size: 15px;
   }
 }
 #service-about {
@@ -992,12 +1011,19 @@ visibility: hidden;
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: row;
+  margin: 0 10%;
+
 }
 .service-h2 {
+  display: flex;
+  flex-direction: column;
+  p{
+    text-align: center;
+  }
   h2 {
     font-weight: 700;
     font-size: 30px;
-    margin: 30px;
+    margin: 30px 0 5px;
   }
   width: 100%;
   @extend %center;
@@ -1502,6 +1528,36 @@ input[type=submit] {
 }
 
 //////////////////////////////// case ry & case tinc end ///////////////////////
+
+////////////////////////////////// success /////////////////////////////////////
+.success-content {
+  @extend %center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  font-size: 25px;
+  img {
+    width: 35%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  .readmore {
+    width: auto;
+  }
+  #countdown {
+    @extend %center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 15px;
+    padding-top: 20px;
+    background-image: url(../images/icons/countdown.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+///////////////////////////////// success end //////////////////////////////////
+
 
 ////////////////////////////// max width 1300px ////////////////////////////////
 @media only screen and (max-width: 1300px) {

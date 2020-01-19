@@ -195,6 +195,13 @@ li {
 
 ///////////// Nav animation //////////////
 
+#presentnav::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: $gradient-right;
+}
 
 .navlink ul li a::after, .departments a::after, .footer-list a::after {
   content: '';
@@ -636,7 +643,7 @@ footer {
   display: flex;
   flex-direction: row;
   width: 90%;
-  max-width: 1000px;
+  max-width: 1100px;
   justify-content: space-between;
   margin: auto;
 }
@@ -912,8 +919,6 @@ visibility: hidden;
   @extend %center;
   width: 100%;
   height: 100vh;
-  min-height: 800px;
-  max-height: 1080px;
   max-width: 1600px;
   margin: auto;
   background-image: url(../images/service-background.jpg);
@@ -921,10 +926,8 @@ visibility: hidden;
   background-position: center;
 }
 .service-main-content {
-  padding-bottom: 50px;
   p{
     margin-bottom: 10px;
-    text-align: left;
   }
   h1 {
     font-size: 40px;
@@ -948,10 +951,9 @@ visibility: hidden;
 }
 .service-card {
   margin: 15px;
-  height: 375px;
   @extend %center;
   flex-direction: column;
-  width: 25%;
+  width: 280px;
   padding: 25px 10px;
   background-color: $main-beige;
   h3 {
@@ -1009,6 +1011,7 @@ visibility: hidden;
   flex-wrap: wrap;
   flex-direction: row;
   margin: 0 10%;
+
 }
 .service-h2 {
   display: flex;
@@ -1026,13 +1029,13 @@ visibility: hidden;
 }
 .service-about-container {
   padding-top: 20px;
-width: 26%;
+width: 30%;
 display: flex;
 flex-direction: column;
 text-align: center;
 margin-bottom: 50px;
 img{
-  height: 60px;
+  height: 80px;
   width: auto;
   margin: auto;
   margin-top: 20px;
@@ -1330,13 +1333,14 @@ input[type=submit] {
   display: flex;
   justify-content: center;
   margin-top: 35px;
-}
-.showcase-video{
+
+iframe{
   width: 70%;
-  height: auto;
+  height: 441px;
+  position: relative;
 
 }
-
+}
 .showcase-content{
   background-color: $main-beige;
   margin: auto;
@@ -1521,6 +1525,35 @@ input[type=submit] {
 }
 
 //////////////////////////////// case ry & case tinc end ///////////////////////
+
+////////////////////////////////// success /////////////////////////////////////
+.success-content {
+  @extend %center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  font-size: 25px;
+  img {
+    width: 35%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  .readmore {
+    width: auto;
+  }
+  #countdown {
+    @extend %center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 15px;
+    padding-top: 20px;
+    background-image: url(../images/icons/countdown.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+///////////////////////////////// success end //////////////////////////////////
 
 ////////////////////////////// max width 1300px ////////////////////////////////
 @media only screen and (max-width: 1300px) {
@@ -2196,6 +2229,14 @@ input[type=submit] {
   ////////// service 800px end //////////////
 
   ////////// case ting & case ry 800px //////////////
+
+  .video-wrapper{
+  }
+  iframe{
+  height: 300px;
+  width: 80%;
+
+  }
   .showcase-heading, .othercase-heading{
    h1, h2{
      font-size: 35px;
@@ -2415,7 +2456,7 @@ input[type=submit] {
 
 ////////// case ry & case tinc 600px //////////////
 .showcase-wrapper{
-  width: 95%;
+  width: 100%;
   margin-top: 100px;
 }
 .showcase-heading, .othercase-heading{
@@ -2429,6 +2470,13 @@ input[type=submit] {
 }
 .showcase-line-left{
   display: none;
+}
+
+.video-wrapper{
+  iframe{
+    width: 100%;
+    height: 250px;
+  }
 }
 
 .showcase-content{
@@ -2683,6 +2731,14 @@ flex-direction: column;
   width: 95%;
 }
 ////////// contact 600px end //////////////
+////////////// success 600px //////////////
+.success-content {
+  img {
+    width: 60%;
+  }
+  font-size: 20px;
+}
+///////////// success 600px end ///////////
 }
 //////////////////////// max width 600px end ///////////////////////////////////
 
