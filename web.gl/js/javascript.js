@@ -7,25 +7,23 @@ $("#index").scrollTop(0);
      $('.mobileNav div, .overlay').toggleClass("slide");
    });
 
-   
+
 
    //navbar scroll change color
    // https://stackoverflow.com/questions/23706003/changing-nav-bar-color-after-scrolling
    $(document).scroll(function () {
-	  var $nav = $(".frontpage-nav");
+	  var $nav = $(".frontpage-nav, #logo-frontpage, .burger-frontpage div");
+    // Toggle class if the amount you have scrolled is higher then the hight of the navbar.
 	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-    $("#logo-frontpage").toggleClass('scrolled', $(this).scrollTop() > $nav.height());
 
+    // changes attribute instead of adding class
     if($(this).scrollTop() > $nav.height()) {
         $('#logo-frontpage').attr('src','images/repenso_dark.svg');
-        $(".burger-frontpage div").css("background-color", "#001624");
-        $("#logo-frontpage img").css("width", "20px");
 
 
     }
     else {
         $('#logo-frontpage').attr('src',"images/repenso_white.svg");
-        $(".burger-frontpage div").css("background-color", "white");
 
     }
 	});
